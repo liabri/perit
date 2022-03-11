@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "perit:block/nether_brick/blue_nether_brick_slab"
+    },
+    "type=double": {
+      "model": "perit:block/nether_brick/blue_nether_bricks"
+    },
+    "type=top": {
+      "model": "perit:block/nether_brick/blue_nether_brick_slab_top"
+    }
+  }
+}

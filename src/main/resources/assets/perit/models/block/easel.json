@@ -1,8 +1,0 @@
-{
-  "parent": "block/orientable",
-  "textures": {
-    "top": "tila:blocks/easel",
-    "front": "tila:blocks/easel",
-    "side": "tila:blocks/easel"
-  }
-}
