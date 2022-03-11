@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import org.liabri.perit.blocks.Blocks;
 import org.liabri.perit.items.Items;
+import org.liabri.perit.materials.Materials;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,6 +18,7 @@ public class Perit implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		Materials.init();
 		Blocks.init();
 		Items.init();
 	}
