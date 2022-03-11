@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "perit",
+  "version": "${version}",
+
+  "name": "Perit",
+  "description": "Blocks.",
+  "authors": [
+    "liabri"
+  ],
+
+  "license": "CC0-1.0",
+  "icon": "assets/perit/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.liabri.perit.PeritClient"
+    ],
+    "main": [
+      "org.liabri.perit.Perit"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  }
+}
