@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "perit:block/terracotta/bricks/lime_terracotta_bricks"
+  }
+}
+

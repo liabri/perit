@@ -9,10 +9,11 @@ public class Materials {
 
     public static void init() {}
 
-    public static final ColouredMaterial[] colouredMaterials = new ColouredMaterial[2];
+    public static final ColouredMaterial[] colouredMaterials = new ColouredMaterial[3];
 
     static {
-        colouredMaterials[0] = new ColouredMaterial("terracotta_bricks", FabricBlockSettings.copy(Blocks.TERRACOTTA), true);
-        colouredMaterials[1] = new ColouredMaterial("terracotta_shingles", FabricBlockSettings.copy(Blocks.TERRACOTTA), true);
+        colouredMaterials[0] = new ColouredMaterial("terracotta_bricks", "terracotta_brick", FabricBlockSettings.copy(Blocks.TERRACOTTA), true);
+        colouredMaterials[1] = new ColouredMaterial("terracotta_shingles", "terracotta_shingle", FabricBlockSettings.copy(Blocks.TERRACOTTA), true);
+//        colouredMaterials[2] = new ColouredMaterial("terracotta", Blocks.TERRACOTTA, true);
     }
 }

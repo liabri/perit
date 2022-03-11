@@ -67,7 +67,7 @@ public class ColouredMaterial {
     public final Pair<Block, Item> WHITE_STAIRS;
     public final Pair<Block, Item> YELLOW_STAIRS;
 
-    public ColouredMaterial(String name, AbstractBlock.Settings settings, boolean variantBlocks) {
+    public ColouredMaterial(String name, String adj, AbstractBlock.Settings settings, boolean variantBlocks) {
         DEFAULT = Blocks.register(name, new Block(settings), ItemGroup.BUILDING_BLOCKS);
         BLACK = Blocks.register("black_" + name, new Block(FabricBlockSettings.copy(DEFAULT.getLeft())), ItemGroup.BUILDING_BLOCKS);
         BLUE = Blocks.register("blue_" + name, new Block(FabricBlockSettings.copy(DEFAULT.getLeft())), ItemGroup.BUILDING_BLOCKS);
@@ -88,41 +88,41 @@ public class ColouredMaterial {
         YELLOW = Blocks.register("yellow_" + name, new Block(FabricBlockSettings.copy(DEFAULT.getLeft())), ItemGroup.BUILDING_BLOCKS);
 
         if (variantBlocks) {
-            DEFAULT_SLAB = Blocks.register("" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            BLACK_SLAB = Blocks.register("black_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            BLUE_SLAB = Blocks.register("blue_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            BROWN_SLAB = Blocks.register("brown_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            CYAN_SLAB = Blocks.register("cyan_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            GREEN_SLAB = Blocks.register("green_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            GREY_SLAB = Blocks.register("grey_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            LIGHT_BLUE_SLAB = Blocks.register("light_blue_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            LIGHT_GREY_SLAB = Blocks.register("light_grey_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            LIME_SLAB = Blocks.register("lime_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            MAGENTA_SLAB = Blocks.register("magenta_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            ORANGE_SLAB = Blocks.register("orange_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            PINK_SLAB = Blocks.register("pink_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            PURPLE_SLAB = Blocks.register("purple_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            RED_SLAB = Blocks.register("red_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            WHITE_SLAB = Blocks.register("white_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            YELLOW_SLAB = Blocks.register("yellow_" + name + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            DEFAULT_SLAB = Blocks.register("" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            BLACK_SLAB = Blocks.register("black_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            BLUE_SLAB = Blocks.register("blue_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            BROWN_SLAB = Blocks.register("brown_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            CYAN_SLAB = Blocks.register("cyan_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            GREEN_SLAB = Blocks.register("green_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            GREY_SLAB = Blocks.register("grey_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            LIGHT_BLUE_SLAB = Blocks.register("light_blue_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            LIGHT_GREY_SLAB = Blocks.register("light_grey_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            LIME_SLAB = Blocks.register("lime_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            MAGENTA_SLAB = Blocks.register("magenta_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            ORANGE_SLAB = Blocks.register("orange_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            PINK_SLAB = Blocks.register("pink_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            PURPLE_SLAB = Blocks.register("purple_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            RED_SLAB = Blocks.register("red_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            WHITE_SLAB = Blocks.register("white_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            YELLOW_SLAB = Blocks.register("yellow_" + adj + "_slab", new SlabBlock(FabricBlockSettings.copy(DEFAULT_SLAB.getLeft())), ItemGroup.BUILDING_BLOCKS);
 
-            DEFAULT_STAIRS = Blocks.register("" + name + "_stairs", new StairsBlock(DEFAULT.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            BLACK_STAIRS = Blocks.register("black_" + name + "_stairs", new StairsBlock(BLACK.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            BLUE_STAIRS = Blocks.register("blue_" + name + "_stairs", new StairsBlock(BLUE.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            BROWN_STAIRS = Blocks.register("brown_" + name + "_stairs", new StairsBlock(BROWN.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            CYAN_STAIRS = Blocks.register("cyan_" + name + "_stairs", new StairsBlock(CYAN.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            GREEN_STAIRS = Blocks.register("green_" + name + "_stairs", new StairsBlock(GREEN.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            GREY_STAIRS = Blocks.register("grey_" + name + "_stairs", new StairsBlock(GREY.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            LIGHT_BLUE_STAIRS = Blocks.register("light_blue_" + name + "_stairs", new StairsBlock(LIGHT_BLUE.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            LIGHT_GREY_STAIRS = Blocks.register("light_grey_" + name + "_stairs", new StairsBlock(LIGHT_GREY.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            LIME_STAIRS = Blocks.register("lime_" + name + "_stairs", new StairsBlock(LIME.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            MAGENTA_STAIRS = Blocks.register("magenta_" + name + "_stairs", new StairsBlock(MAGENTA.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            ORANGE_STAIRS = Blocks.register("orange_" + name + "_stairs", new StairsBlock(ORANGE.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            PINK_STAIRS = Blocks.register("pink_" + name + "_stairs", new StairsBlock(PINK.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            PURPLE_STAIRS = Blocks.register("purple_" + name + "_stairs", new StairsBlock(PURPLE.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            RED_STAIRS = Blocks.register("red_" + name + "_stairs", new StairsBlock(RED.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            WHITE_STAIRS = Blocks.register("white_" + name + "_stairs", new StairsBlock(WHITE.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
-            YELLOW_STAIRS = Blocks.register("yellow_" + name + "_stairs", new StairsBlock(YELLOW.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            DEFAULT_STAIRS = Blocks.register("" + adj + "_stairs", new StairsBlock(DEFAULT.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            BLACK_STAIRS = Blocks.register("black_" + adj + "_stairs", new StairsBlock(BLACK.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            BLUE_STAIRS = Blocks.register("blue_" + adj + "_stairs", new StairsBlock(BLUE.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            BROWN_STAIRS = Blocks.register("brown_" + adj + "_stairs", new StairsBlock(BROWN.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            CYAN_STAIRS = Blocks.register("cyan_" + adj + "_stairs", new StairsBlock(CYAN.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            GREEN_STAIRS = Blocks.register("green_" + adj + "_stairs", new StairsBlock(GREEN.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            GREY_STAIRS = Blocks.register("grey_" + adj + "_stairs", new StairsBlock(GREY.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            LIGHT_BLUE_STAIRS = Blocks.register("light_blue_" + adj + "_stairs", new StairsBlock(LIGHT_BLUE.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            LIGHT_GREY_STAIRS = Blocks.register("light_grey_" + adj + "_stairs", new StairsBlock(LIGHT_GREY.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            LIME_STAIRS = Blocks.register("lime_" + adj + "_stairs", new StairsBlock(LIME.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            MAGENTA_STAIRS = Blocks.register("magenta_" + adj + "_stairs", new StairsBlock(MAGENTA.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            ORANGE_STAIRS = Blocks.register("orange_" + adj + "_stairs", new StairsBlock(ORANGE.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            PINK_STAIRS = Blocks.register("pink_" + adj + "_stairs", new StairsBlock(PINK.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            PURPLE_STAIRS = Blocks.register("purple_" + adj + "_stairs", new StairsBlock(PURPLE.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            RED_STAIRS = Blocks.register("red_" + adj + "_stairs", new StairsBlock(RED.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            WHITE_STAIRS = Blocks.register("white_" + adj + "_stairs", new StairsBlock(WHITE.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
+            YELLOW_STAIRS = Blocks.register("yellow_" + adj + "_stairs", new StairsBlock(YELLOW.getLeft().getDefaultState(), FabricBlockSettings.copy(DEFAULT_STAIRS.getLeft())), ItemGroup.BUILDING_BLOCKS);
         } else {
             DEFAULT_SLAB = null;
             BLACK_SLAB = null;

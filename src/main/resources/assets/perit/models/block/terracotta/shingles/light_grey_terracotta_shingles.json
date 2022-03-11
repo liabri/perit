@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "perit:block/terracotta/shingles/light_grey_terracotta_shingles"
+  }
+}
+
