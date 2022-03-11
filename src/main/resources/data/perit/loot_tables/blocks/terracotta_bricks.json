@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "perit:orange_terracotta_brick,_stairs"
+          "name": "perit:terracotta_bricks"
         }
       ],
       "conditions": [

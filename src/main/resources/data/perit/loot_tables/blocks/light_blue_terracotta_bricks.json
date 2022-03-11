@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "perit:terracotta_brick,_stairs"
+          "name": "perit:light_blue_terracotta_bricks"
         }
       ],
       "conditions": [
