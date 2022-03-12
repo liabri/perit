@@ -100,6 +100,22 @@
     "perit:red_terracotta_shingle_slab",
     "perit:terracotta_shingle_slab",
     "perit:white_terracotta_shingle_slab",
-    "perit:yellow_terracotta_shingle_slab"
+    "perit:yellow_terracotta_shingle_slab",
+    "perit:black_packed_terracotta",
+    "perit:blue_packed_terracotta",
+    "perit:brown_packed_terracotta",
+    "perit:cyan_packed_terracotta",
+    "perit:green_packed_terracotta",
+    "perit:grey_packed_terracotta",
+    "perit:light_blue_packed_terracotta",
+    "perit:light_grey_packed_terracotta",
+    "perit:magenta_packed_terracotta",
+    "perit:orange_packed_terracotta",
+    "perit:pink_packed_terracotta",
+    "perit:purple_packed_terracotta",
+    "perit:red_packed_terracotta",
+    "perit:packed_terracotta",
+    "perit:white_packed_terracotta",
+    "perit:yellow_packed_terracotta"
   ]
 }
