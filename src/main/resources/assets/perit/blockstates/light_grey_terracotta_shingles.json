@@ -1,6 +1,7 @@
 {
   "variants": {
-    "": { "model": "perit:block/terracotta/shingles/light_grey_terracotta_shingles" }
+    "": {
+      "model": "perit:block/terracotta/shingles/light_grey_terracotta_shingles"
+    }
   }
 }
-
