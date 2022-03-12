@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "perit:blue_nether_bricks",
+    "perit:blue_nether_brick_stairs",
+    "perit:blue_nether_brick_slab",
+    "perit:blue_nether_brick_wall",
     "perit:black_terracotta_bricks",
     "perit:blue_terracotta_bricks",
     "perit:brown_terracotta_bricks",
