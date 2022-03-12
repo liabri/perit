@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:grey_terracotta"
+    }
+  },
+  "result": {
+    "item": "perit:grey_packed_terracotta",
+    "count": 3
+  }
+}

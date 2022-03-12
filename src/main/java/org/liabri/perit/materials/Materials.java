@@ -18,9 +18,9 @@ public class Materials {
         colouredMaterials[2] = new ColouredMaterial("packed_terracotta", "packed_terracotta", FabricBlockSettings.copy(Blocks.TERRACOTTA), false);
 
 
-        stoneMaterials[0] = new StoneMaterial("andesite", FabricBlockSettings.copyOf(Blocks.ANDESITE), ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Base,
-                StoneMaterial.Kinds.Polished,
-        });
+//        stoneMaterials[0] = new StoneMaterial("andesite", FabricBlockSettings.copyOf(Blocks.ANDESITE), ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kinds[]{
+//                StoneMaterial.Kinds.Base,
+//                StoneMaterial.Kinds.Polished,
+//        });
     }
 }
