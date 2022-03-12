@@ -1,7 +1,6 @@
 {
-  "parent": "block/cube_all",
+  "parent": "minecraft:block/cube_all",
   "textures": {
     "all": "perit:block/terracotta/shingles/purple_terracotta_shingles"
   }
 }
-
