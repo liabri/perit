@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "perit:block/packed_light_blue_terracotta_slab"
-  }
+  "parent": "perit:block/packed_light_blue_terracotta_slab"
 }

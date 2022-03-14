@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "perit:block/orange_terracotta_cracked_briquettes",
+    "top": "perit:block/orange_terracotta_cracked_briquettes",
+    "side": "perit:block/orange_terracotta_cracked_briquettes"
+  }
+}

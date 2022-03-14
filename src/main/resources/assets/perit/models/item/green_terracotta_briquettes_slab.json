@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "perit:block/green_terracotta_briquettes_slab"
-  }
+  "parent": "perit:block/green_terracotta_briquettes_slab"
 }

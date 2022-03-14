@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/stairs",
   "textures": {
-    "all": "perit:block/purple_terracotta_cracked_shingle_stairs"
+    "bottom": "perit:block/purple_terracotta_cracked_shingles",
+    "top": "perit:block/purple_terracotta_cracked_shingles",
+    "side": "perit:block/purple_terracotta_cracked_shingles"
   }
 }
