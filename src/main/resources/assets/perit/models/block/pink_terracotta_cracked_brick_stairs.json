@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "perit:block/pink_terracotta_cracked_bricks",
-    "top": "perit:block/pink_terracotta_cracked_bricks",
-    "side": "perit:block/pink_terracotta_cracked_bricks"
-  }
-}

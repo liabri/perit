@@ -30,7 +30,7 @@ public class Materials {
 
     static {
         for (String colour: COLOURS) {
-            stoneMaterials[0] = new StoneMaterial(colour + "_terracotta", FabricBlockSettings.copyOf(Blocks.TERRACOTTA), ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kinds[]{
+            stoneMaterials[0] = new StoneMaterial(colour + "_terracotta", Blocks.TERRACOTTA, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kinds[]{
                     StoneMaterial.Kinds.Base,
                     StoneMaterial.Kinds.Smooth,
                     StoneMaterial.Kinds.Cut,
@@ -42,7 +42,7 @@ public class Materials {
             });
         }
 
-        stoneMaterials[1] = new StoneMaterial( "andesite", FabricBlockSettings.copyOf(Blocks.ANDESITE), ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kinds[]{
+        stoneMaterials[1] = new StoneMaterial( "andesite", Blocks.ANDESITE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kinds[]{
                 StoneMaterial.Kinds.Base,
                 StoneMaterial.Kinds.Polished,
         });

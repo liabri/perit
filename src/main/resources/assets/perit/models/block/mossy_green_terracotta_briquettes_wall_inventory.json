@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "perit:block/mossy_green_terracotta_briquettes"
+  }
+}

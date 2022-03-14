@@ -8,16 +8,17 @@
  import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
  import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
  import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
- import net.minecraft.block.*;
+ import net.minecraft.block.DoorBlock;
+ import net.minecraft.block.FenceBlock;
+ import net.minecraft.block.FenceGateBlock;
+ import net.minecraft.block.TrapdoorBlock;
  import net.minecraft.data.client.*;
  import net.minecraft.data.server.recipe.RecipeJsonProvider;
  import net.minecraft.tag.BlockTags;
  import net.minecraft.tag.ItemTags;
  import net.minecraft.util.Identifier;
  import net.minecraft.util.registry.Registry;
- import org.liabri.perit.blocks.Blocks;
- import org.liabri.perit.blocks.SlabBlock;
- import org.liabri.perit.blocks.StairsBlock;
+ import org.liabri.perit.blocks.*;
 
  import java.util.function.Consumer;
 
@@ -54,6 +55,16 @@
 
         @Override
         protected void generateRecipes(Consumer<RecipeJsonProvider> exporter) {
+            Blocks.blocks.forEach((block) -> {
+                String name = String.valueOf(block.getName());
+
+                if (name.contains("cracked_cut")) {
+                    if (block instanceof VariantBlock) {
+                        offerStonecuttingRecipe(exporter, block, ((VariantBlock) block).getBaseBlockState().getBlock());
+                    }
+                }
+            });
+
 //            offerPlanksRecipe2(exporter, SIMPLE_BLOCK, ItemTags.TERRACOTTA);
         }
     }
@@ -79,7 +90,6 @@
         public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
             Blocks.blocks.forEach((block) ->  {
                 if (block instanceof SlabBlock slabBlock) {
-//                    blockStateModelGenerator.registerItemModel(slabBlock);
                     TextureMap textureMap = TextureMap.all(slabBlock.getBaseBlockState().getBlock());
                     Identifier identifier = Models.SLAB.upload(slabBlock, textureMap, blockStateModelGenerator.modelCollector);
                     Identifier identifier2 = Models.SLAB_TOP.upload(slabBlock, textureMap, blockStateModelGenerator.modelCollector);
@@ -89,10 +99,19 @@
                 } else if (block instanceof StairsBlock stairsBlock) {
                     TextureMap textureMap = TextureMap.all(stairsBlock.getBaseBlockState().getBlock());
                     Identifier identifier = Models.STAIRS.upload(stairsBlock, textureMap, blockStateModelGenerator.modelCollector);
-                    Identifier identifier3 = Models.INNER_STAIRS.upload(stairsBlock, "_inner", textureMap, blockStateModelGenerator.modelCollector);
-                    Identifier identifier2 = Models.OUTER_STAIRS.upload(stairsBlock, "_outer", textureMap, blockStateModelGenerator.modelCollector);
-                    BlockStateSupplier stairs = BlockStateModelGenerator.createStairsBlockState(stairsBlock, identifier, identifier2, identifier3);
+                    Identifier identifier_inner = Models.INNER_STAIRS.upload(stairsBlock, "_inner", textureMap, blockStateModelGenerator.modelCollector);
+                    Identifier identifier_outer = Models.OUTER_STAIRS.upload(stairsBlock, "_outer", textureMap, blockStateModelGenerator.modelCollector);
+                    BlockStateSupplier stairs = BlockStateModelGenerator.createStairsBlockState(stairsBlock, identifier_inner, identifier, identifier_outer);
                     blockStateModelGenerator.blockStateCollector.accept(stairs);
+                } else if (block instanceof WallBlock wallBlock) {
+                    TextureMap textureMap = TextureMap.all(wallBlock.getBaseBlockState().getBlock());
+                    Identifier identifier = Models.TEMPLATE_WALL_POST.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
+                    Identifier identifier2 = Models.TEMPLATE_WALL_SIDE.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
+                    Identifier identifier3 = Models.TEMPLATE_WALL_SIDE_TALL.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
+                    BlockStateSupplier wall = BlockStateModelGenerator.createWallBlockState(wallBlock, identifier, identifier2, identifier3);
+                    blockStateModelGenerator.blockStateCollector.accept(wall);
+                    Identifier identifier4 = Models.WALL_INVENTORY.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
+//                    blockStateModelGenerator.registerParentedItemModel(wallBlock, identifier4);
                 } else if (block instanceof DoorBlock doorBlock) {
                     blockStateModelGenerator.registerDoor(doorBlock);
                 } else if (block instanceof TrapdoorBlock trapdoorBlock) {
@@ -123,6 +142,11 @@
 
         @Override
         protected void generateTags() {
+            Blocks.blocks.forEach((block) -> {
+                if (block instanceof WallBlock wallBlock) {
+                    getOrCreateTagBuilder(BlockTags.WALLS).add(wallBlock);
+                }
+            });
 //            getOrCreateTagBuilder(BlockTags.FIRE).add(SIMPLE_BLOCK);
 //            getOrCreateTagBuilder(BlockTags.ANVIL).setReplace(true).add(SIMPLE_BLOCK, BLOCK_WITHOUT_ITEM);
 //            getOrCreateTagBuilder(BlockTags.ACACIA_LOGS).forceAddTag(BlockTags.ANIMALS_SPAWNABLE_ON);

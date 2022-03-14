@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "perit:block/white_terracotta_cracked_shingles",
-    "top": "perit:block/white_terracotta_cracked_shingles",
-    "side": "perit:block/white_terracotta_cracked_shingles"
-  }
-}

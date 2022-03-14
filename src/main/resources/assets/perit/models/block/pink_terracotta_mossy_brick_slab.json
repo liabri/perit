@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "perit:block/pink_terracotta_mossy_bricks",
-    "top": "perit:block/pink_terracotta_mossy_bricks",
-    "side": "perit:block/pink_terracotta_mossy_bricks"
-  }
-}

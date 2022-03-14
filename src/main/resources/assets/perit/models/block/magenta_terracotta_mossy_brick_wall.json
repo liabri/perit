@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "perit:block/magenta_terracotta_mossy_brick_wall"
-  }
-}
