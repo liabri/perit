@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "perit:block/red_terracotta_mossy_bricks",
+    "top": "perit:block/red_terracotta_mossy_bricks",
+    "side": "perit:block/red_terracotta_mossy_bricks"
+  }
+}

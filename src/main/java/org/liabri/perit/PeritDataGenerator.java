@@ -79,31 +79,20 @@
         public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
             Blocks.blocks.forEach((block) ->  {
                 if (block instanceof SlabBlock slabBlock) {
-                    blockStateModelGenerator.registerItemModel(slabBlock);
+//                    blockStateModelGenerator.registerItemModel(slabBlock);
                     TextureMap textureMap = TextureMap.all(slabBlock.getBaseBlockState().getBlock());
-//                    TextureMap textureMap2 = TextureMap.sideEnd(TextureMap.getSubId(slabBlock, "_side"), textureMap.getTexture(TextureKey.TOP));
                     Identifier identifier = Models.SLAB.upload(slabBlock, textureMap, blockStateModelGenerator.modelCollector);
                     Identifier identifier2 = Models.SLAB_TOP.upload(slabBlock, textureMap, blockStateModelGenerator.modelCollector);
                     Identifier identifier3 = Models.CUBE_COLUMN.uploadWithoutVariant(slabBlock, "_double", textureMap, blockStateModelGenerator.modelCollector);
                     BlockStateSupplier slab = BlockStateModelGenerator.createSlabBlockState(slabBlock, identifier, identifier2, identifier3);
                     blockStateModelGenerator.blockStateCollector.accept(slab);
-//                } else if (block instanceof StairsBlock stairsBlock) {
-//                    stairsBlock.getDefaultState();
-//                    blockStateModelGenerator.registerItemModel(stairsBlock);
-//
-//                    TextureMap textureMap = TextureMap.all(stairsBlock);
-//                    TextureMap textureMap2 = TextureMap.sideEnd(TextureMap.getSubId(stairsBlock, "_side"), textureMap.getTexture(TextureKey.TOP));
-//                    Identifier identifier = Models.STAIRS.upload(stairsBlock, textureMap2, blockStateModelGenerator.modelCollector);
-//                    Identifier identifier2 = Models.INNER_STAIRS.upload(stairsBlock, "_inner", textureMap2, blockStateModelGenerator.modelCollector);
-//                    Identifier identifier3 = Models.OUTER_STAIRS.upload(stairsBlock, "_outer", textureMap2, blockStateModelGenerator.modelCollector);
-//                    BlockStateSupplier slab = BlockStateModelGenerator.createSlabBlockState(stairsBlock, identifier, identifier2, identifier3);
-//                    blockStateModelGenerator.blockStateCollector.accept(slab);
-
-//                    Identifier identifier = this.ensureModel(Models.INNER_STAIRS, block);
-//                    Identifier identifier2 = this.ensureModel(Models.STAIRS, block);
-//                    Identifier identifier3 = this.ensureModel(Models.OUTER_STAIRS, block);
-//                    BlockStateModelGenerator.this.blockStateCollector.accept(BlockStateModelGenerator.createStairsBlockState(block, identifier, identifier2, identifier3));
-
+                } else if (block instanceof StairsBlock stairsBlock) {
+                    TextureMap textureMap = TextureMap.all(stairsBlock.getBaseBlockState().getBlock());
+                    Identifier identifier = Models.STAIRS.upload(stairsBlock, textureMap, blockStateModelGenerator.modelCollector);
+                    Identifier identifier3 = Models.INNER_STAIRS.upload(stairsBlock, "_inner", textureMap, blockStateModelGenerator.modelCollector);
+                    Identifier identifier2 = Models.OUTER_STAIRS.upload(stairsBlock, "_outer", textureMap, blockStateModelGenerator.modelCollector);
+                    BlockStateSupplier stairs = BlockStateModelGenerator.createStairsBlockState(stairsBlock, identifier, identifier2, identifier3);
+                    blockStateModelGenerator.blockStateCollector.accept(stairs);
                 } else if (block instanceof DoorBlock doorBlock) {
                     blockStateModelGenerator.registerDoor(doorBlock);
                 } else if (block instanceof TrapdoorBlock trapdoorBlock) {

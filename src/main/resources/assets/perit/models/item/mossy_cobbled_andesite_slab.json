@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "perit:block/mossy_cobbled_andesite_slab"
-  }
+  "parent": "perit:block/mossy_cobbled_andesite_slab"
 }
