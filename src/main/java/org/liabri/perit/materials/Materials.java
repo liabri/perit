@@ -27,11 +27,11 @@ public class Materials {
             "yellow"
     };
 
-    public static final StoneMaterial[] stoneMaterials = new StoneMaterial[1];
+    public static final StoneMaterial[] stoneMaterials = new StoneMaterial[2];
 
     static {
         for (String colour: COLOURS) {
-            stoneMaterials[0] = new StoneMaterial(colour, "terracotta", FabricBlockSettings.copyOf(Blocks.TERRACOTTA), ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kinds[]{
+            stoneMaterials[0] = new StoneMaterial(colour + "_terracotta", FabricBlockSettings.copyOf(Blocks.TERRACOTTA), ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kinds[]{
                     StoneMaterial.Kinds.Base,
                     StoneMaterial.Kinds.Smooth,
                     StoneMaterial.Kinds.Cut,
@@ -42,14 +42,10 @@ public class Materials {
                     StoneMaterial.Kinds.MossyCobbled
             });
         }
-//        colouredMaterials[0] = new ColouredMaterial("terracotta_bricks", "terracotta_brick", FabricBlockSettings.copy(Blocks.TERRACOTTA), true);
-//        colouredMaterials[1] = new ColouredMaterial("terracotta_shingles", "terracotta_shingle", FabricBlockSettings.copy(Blocks.TERRACOTTA), true);
-//        colouredMaterials[2] = new ColouredMaterial("packed_terracotta", "packed_terracotta", FabricBlockSettings.copy(Blocks.TERRACOTTA), false);
 
-
-//        stoneMaterials[0] = new StoneMaterial("andesite", FabricBlockSettings.copyOf(Blocks.ANDESITE), ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kinds[]{
-//                StoneMaterial.Kinds.Base,
-//                StoneMaterial.Kinds.Polished,
-//        });
+        stoneMaterials[1] = new StoneMaterial( "andesite", FabricBlockSettings.copyOf(Blocks.ANDESITE), ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kinds[]{
+                StoneMaterial.Kinds.Base,
+                StoneMaterial.Kinds.Polished,
+        });
     }
 }
