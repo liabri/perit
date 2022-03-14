@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "perit:block/green_terracotta_mossy_briquettes",
-    "top": "perit:block/green_terracotta_mossy_briquettes",
-    "side": "perit:block/green_terracotta_mossy_briquettes"
-  }
-}
