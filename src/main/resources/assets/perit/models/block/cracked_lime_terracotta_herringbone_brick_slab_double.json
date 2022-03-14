@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "perit:block/cracked_lime_terracottaherringbone_bricks",
+    "side": "perit:block/cracked_lime_terracottaherringbone_bricks"
+  }
+}
