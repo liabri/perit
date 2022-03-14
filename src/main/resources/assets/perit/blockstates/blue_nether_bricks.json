@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "perit:block/nether_brick/blue_nether_bricks"
+      "model": "perit:block/blue_nether_bricks"
     }
   }
 }

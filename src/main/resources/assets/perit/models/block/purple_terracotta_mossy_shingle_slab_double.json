@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "perit:block/purple_terracotta_mossy_shingles",
+    "side": "perit:block/purple_terracotta_mossy_shingles"
+  }
+}

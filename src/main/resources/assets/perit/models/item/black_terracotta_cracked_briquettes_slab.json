@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "perit:block/black_terracotta_cracked_briquettes_slab"
+  }
+}

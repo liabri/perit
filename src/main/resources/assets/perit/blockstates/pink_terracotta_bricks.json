@@ -1,6 +1,7 @@
 {
   "variants": {
-    "": { "model": "perit:block/terracotta/bricks/pink_terracotta_bricks" }
+    "": {
+      "model": "perit:block/pink_terracotta_bricks"
+    }
   }
 }
-

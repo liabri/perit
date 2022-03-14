@@ -19,6 +19,9 @@
     ],
     "main": [
       "org.liabri.perit.Perit"
+    ],
+    "fabric-datagen": [
+      "org.liabri.perit.PeritDataGenerator"
     ]
   },
 

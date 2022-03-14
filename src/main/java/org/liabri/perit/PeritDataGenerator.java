@@ -8,13 +8,16 @@
  import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
  import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
  import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
- import net.minecraft.data.client.BlockStateModelGenerator;
- import net.minecraft.data.client.ItemModelGenerator;
+ import net.minecraft.block.*;
+ import net.minecraft.data.client.*;
  import net.minecraft.data.server.recipe.RecipeJsonProvider;
  import net.minecraft.tag.BlockTags;
  import net.minecraft.tag.ItemTags;
- import net.minecraft.util.registry.BuiltinRegistries;
+ import net.minecraft.util.Identifier;
  import net.minecraft.util.registry.Registry;
+ import org.liabri.perit.blocks.Blocks;
+ import org.liabri.perit.blocks.SlabBlock;
+ import org.liabri.perit.blocks.StairsBlock;
 
  import java.util.function.Consumer;
 
@@ -51,7 +54,7 @@
 
         @Override
         protected void generateRecipes(Consumer<RecipeJsonProvider> exporter) {
-            offerPlanksRecipe2(exporter, SIMPLE_BLOCK, ItemTags.TERRACOTTA);
+//            offerPlanksRecipe2(exporter, SIMPLE_BLOCK, ItemTags.TERRACOTTA);
         }
     }
 
@@ -67,8 +70,6 @@
 //        }
 //    }
 
-
-     // block model
     private static class TestModelProvider extends FabricModelProvider {
         private TestModelProvider(FabricDataGenerator generator) {
             super(generator);
@@ -76,8 +77,47 @@
 
         @Override
         public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-            blockStateModelGenerator.registerSimpleCubeAll(SIMPLE_BLOCK);
-            blockStateModelGenerator.registerSimpleCubeAll(BLOCK_WITHOUT_ITEM);
+            Blocks.blocks.forEach((block) ->  {
+                if (block instanceof SlabBlock slabBlock) {
+                    blockStateModelGenerator.registerItemModel(slabBlock);
+                    TextureMap textureMap = TextureMap.all(slabBlock.getBaseBlockState().getBlock());
+//                    TextureMap textureMap2 = TextureMap.sideEnd(TextureMap.getSubId(slabBlock, "_side"), textureMap.getTexture(TextureKey.TOP));
+                    Identifier identifier = Models.SLAB.upload(slabBlock, textureMap, blockStateModelGenerator.modelCollector);
+                    Identifier identifier2 = Models.SLAB_TOP.upload(slabBlock, textureMap, blockStateModelGenerator.modelCollector);
+                    Identifier identifier3 = Models.CUBE_COLUMN.uploadWithoutVariant(slabBlock, "_double", textureMap, blockStateModelGenerator.modelCollector);
+                    BlockStateSupplier slab = BlockStateModelGenerator.createSlabBlockState(slabBlock, identifier, identifier2, identifier3);
+                    blockStateModelGenerator.blockStateCollector.accept(slab);
+//                } else if (block instanceof StairsBlock stairsBlock) {
+//                    stairsBlock.getDefaultState();
+//                    blockStateModelGenerator.registerItemModel(stairsBlock);
+//
+//                    TextureMap textureMap = TextureMap.all(stairsBlock);
+//                    TextureMap textureMap2 = TextureMap.sideEnd(TextureMap.getSubId(stairsBlock, "_side"), textureMap.getTexture(TextureKey.TOP));
+//                    Identifier identifier = Models.STAIRS.upload(stairsBlock, textureMap2, blockStateModelGenerator.modelCollector);
+//                    Identifier identifier2 = Models.INNER_STAIRS.upload(stairsBlock, "_inner", textureMap2, blockStateModelGenerator.modelCollector);
+//                    Identifier identifier3 = Models.OUTER_STAIRS.upload(stairsBlock, "_outer", textureMap2, blockStateModelGenerator.modelCollector);
+//                    BlockStateSupplier slab = BlockStateModelGenerator.createSlabBlockState(stairsBlock, identifier, identifier2, identifier3);
+//                    blockStateModelGenerator.blockStateCollector.accept(slab);
+
+//                    Identifier identifier = this.ensureModel(Models.INNER_STAIRS, block);
+//                    Identifier identifier2 = this.ensureModel(Models.STAIRS, block);
+//                    Identifier identifier3 = this.ensureModel(Models.OUTER_STAIRS, block);
+//                    BlockStateModelGenerator.this.blockStateCollector.accept(BlockStateModelGenerator.createStairsBlockState(block, identifier, identifier2, identifier3));
+
+                } else if (block instanceof DoorBlock doorBlock) {
+                    blockStateModelGenerator.registerDoor(doorBlock);
+                } else if (block instanceof TrapdoorBlock trapdoorBlock) {
+                    blockStateModelGenerator.registerTrapdoor(trapdoorBlock);
+                } else if (block instanceof FenceBlock fenceBlock) {
+//                    blockStateModelGenerator.registerF
+                } else if (block instanceof FenceGateBlock fenceGateBlock) {
+//                    fenceGateBlocks.add(fenceGateBlock);
+//                } else if (block instanceof  WallBlock wallBlock) {
+//                  blockStateModelGenerator.register
+                } else {
+                    blockStateModelGenerator.registerSimpleCubeAll(block);
+                }
+            });
         }
 
         @Override
@@ -94,9 +134,9 @@
 
         @Override
         protected void generateTags() {
-            getOrCreateTagBuilder(BlockTags.FIRE).add(SIMPLE_BLOCK);
-            getOrCreateTagBuilder(BlockTags.ANVIL).setReplace(true).add(SIMPLE_BLOCK, BLOCK_WITHOUT_ITEM);
-            getOrCreateTagBuilder(BlockTags.ACACIA_LOGS).forceAddTag(BlockTags.ANIMALS_SPAWNABLE_ON);
+//            getOrCreateTagBuilder(BlockTags.FIRE).add(SIMPLE_BLOCK);
+//            getOrCreateTagBuilder(BlockTags.ANVIL).setReplace(true).add(SIMPLE_BLOCK, BLOCK_WITHOUT_ITEM);
+//            getOrCreateTagBuilder(BlockTags.ACACIA_LOGS).forceAddTag(BlockTags.ANIMALS_SPAWNABLE_ON);
         }
     }
 
@@ -108,7 +148,7 @@
 
         @Override
         protected void generateTags() {
-            copy(BlockTags.ANVIL, ItemTags.ANVIL);
+//            copy(BlockTags.ANVIL, ItemTags.ANVIL);
         }
     }
 
@@ -120,8 +160,7 @@
 
         @Override
         protected void generateBlockLootTables() {
-            addDrop(SIMPLE_BLOCK);
-            addDrop(BLOCK_WITHOUT_ITEM, drops(SIMPLE_BLOCK));
+            Blocks.blocks.forEach(this::addDrop);
         }
     }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "perit:block/lime_terracotta_mossy_shingle_slab"
+  }
+}

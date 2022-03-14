@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "perit:block/terracotta/bricks/white_terracotta_brick_slab"
+      "model": "perit:block/white_terracotta_brick_slab"
     },
     "type=double": {
-      "model": "perit:block/terracotta/bricks/white_terracotta_bricks"
+      "model": "perit:block/white_terracotta_brick_slab_double"
     },
     "type=top": {
-      "model": "perit:block/terracotta/bricks/white_terracotta_brick_slab_top"
+      "model": "perit:block/white_terracotta_brick_slab_top"
     }
   }
 }

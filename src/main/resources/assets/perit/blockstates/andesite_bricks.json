@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "perit:block/andesite/andesite_bricks"
+      "model": "perit:block/andesite_bricks"
     }
   }
 }

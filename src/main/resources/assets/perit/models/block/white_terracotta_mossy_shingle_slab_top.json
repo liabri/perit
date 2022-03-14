@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "perit:block/white_terracotta_mossy_shingles",
+    "top": "perit:block/white_terracotta_mossy_shingles",
+    "side": "perit:block/white_terracotta_mossy_shingles"
+  }
+}

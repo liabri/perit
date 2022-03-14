@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "perit:block/magenta_terracotta_mossy_shingle_slab"
+    },
+    "type=double": {
+      "model": "perit:block/magenta_terracotta_mossy_shingle_slab_double"
+    },
+    "type=top": {
+      "model": "perit:block/magenta_terracotta_mossy_shingle_slab_top"
+    }
+  }
+}

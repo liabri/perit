@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "perit:block/light_grey_terracotta_briquettes_wall"
+  }
+}
