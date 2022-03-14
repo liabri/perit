@@ -4,6 +4,8 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 
+import java.util.ArrayList;
+
 public class Materials {
     public static void init() {}
 
@@ -30,7 +32,7 @@ public class Materials {
 
     static {
         for (String colour: COLOURS) {
-            stoneMaterials[0] = new StoneMaterial(colour + "_terracotta", Blocks.TERRACOTTA, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kinds[]{
+            stoneMaterials[0] = new StoneMaterial(colour + "_terracotta", Blocks.TERRACOTTA, ItemGroup.BUILDING_BLOCKS, false, new StoneMaterial.Kinds[]{
                     StoneMaterial.Kinds.Base,
                     StoneMaterial.Kinds.Smooth,
                     StoneMaterial.Kinds.Cut,
@@ -38,13 +40,21 @@ public class Materials {
                     StoneMaterial.Kinds.Polished,
                     StoneMaterial.Kinds.CrackedPolished,
                     StoneMaterial.Kinds.Cobbled,
-                    StoneMaterial.Kinds.MossyCobbled
+                    StoneMaterial.Kinds.MossyCobbled,
+                    StoneMaterial.Kinds.MossyBricks,
+                    StoneMaterial.Kinds.CrackedBricks,
+                    StoneMaterial.Kinds.MossyHerringboneBricks,
+                    StoneMaterial.Kinds.CrackedHerringboneBricks,
+                    StoneMaterial.Kinds.Briquettes,
+                    StoneMaterial.Kinds.MossyBriquettes,
+                    StoneMaterial.Kinds.CrackedBriquettes
             });
         }
 
-        stoneMaterials[1] = new StoneMaterial( "andesite", Blocks.ANDESITE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kinds[]{
+        stoneMaterials[1] = new StoneMaterial( "andesite", Blocks.ANDESITE, ItemGroup.BUILDING_BLOCKS, false, new StoneMaterial.Kinds[]{
                 StoneMaterial.Kinds.Base,
                 StoneMaterial.Kinds.Polished,
         });
     }
 }
+
