@@ -38,8 +38,7 @@ public class StoneMaterial {
         Packed,
         Pillar,
         Column,
-        Chiseled,
-        Tombstone
+        Chiseled
     }
 
     public StoneMaterial(String name, Block block, ItemGroup ITEM_GROUP, Kinds[] blacklist) {
@@ -203,10 +202,5 @@ public class StoneMaterial {
         if (!this.LIST.contains(Kinds.Column)) {
             Blocks.register(this.NAME + "_column", new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
         }
-
-        if (!this.LIST.contains(Kinds.Tombstone)) {
-//            TOMBSTONE = Blocks.register(this.NAME + "_tombstone", new Block(FabricBlockSettings.copy(SMOOTH)), ITEM_GROUP);
-        }
-
     }
 }
