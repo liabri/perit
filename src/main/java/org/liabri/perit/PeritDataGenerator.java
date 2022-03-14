@@ -111,7 +111,7 @@
                     BlockStateSupplier wall = BlockStateModelGenerator.createWallBlockState(wallBlock, identifier, identifier2, identifier3);
                     blockStateModelGenerator.blockStateCollector.accept(wall);
                     Identifier identifier4 = Models.WALL_INVENTORY.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
-//                    blockStateModelGenerator.registerParentedItemModel(wallBlock, identifier4);
+                    blockStateModelGenerator.registerParentedItemModel(wallBlock, identifier4);
                 } else if (block instanceof DoorBlock doorBlock) {
                     blockStateModelGenerator.registerDoor(doorBlock);
                 } else if (block instanceof TrapdoorBlock trapdoorBlock) {
@@ -130,7 +130,7 @@
 
         @Override
         public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-            //itemModelGenerator.register(item, Models.SLAB);
+//            itemModelGenerator.register(item, Models.SLAB);
         }
     }
 
@@ -147,9 +147,6 @@
                     getOrCreateTagBuilder(BlockTags.WALLS).add(wallBlock);
                 }
             });
-//            getOrCreateTagBuilder(BlockTags.FIRE).add(SIMPLE_BLOCK);
-//            getOrCreateTagBuilder(BlockTags.ANVIL).setReplace(true).add(SIMPLE_BLOCK, BLOCK_WITHOUT_ITEM);
-//            getOrCreateTagBuilder(BlockTags.ACACIA_LOGS).forceAddTag(BlockTags.ANIMALS_SPAWNABLE_ON);
         }
     }
 

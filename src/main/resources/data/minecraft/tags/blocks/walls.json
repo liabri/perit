@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "perit:blue_nether_brick_wall",
     "perit:black_terracotta_shingle_wall",
     "perit:mossy_black_terracotta_shingle_wall",
     "perit:cracked_black_terracotta_shingle_wall",
