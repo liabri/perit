@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "perit:block/andesite_cracked_brick_slab"
+  }
+}

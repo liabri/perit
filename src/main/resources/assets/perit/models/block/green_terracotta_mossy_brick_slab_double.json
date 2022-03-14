@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "perit:block/green_terracotta_mossy_bricks",
+    "side": "perit:block/green_terracotta_mossy_bricks"
+  }
+}

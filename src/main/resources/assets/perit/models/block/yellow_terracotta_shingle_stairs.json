@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "perit:block/yellow_terracotta_shingle_stairs"
+  }
+}

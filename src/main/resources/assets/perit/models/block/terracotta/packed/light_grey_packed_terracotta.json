@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "perit:block/terracotta/packed/light_grey_packed_terracotta"
-  }
-}

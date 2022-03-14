@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "perit:block/terracotta/shingles/magenta_terracotta_shingles"
+      "model": "perit:block/magenta_terracotta_shingles"
     }
   }
 }

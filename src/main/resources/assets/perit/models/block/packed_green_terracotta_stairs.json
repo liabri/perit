@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "perit:block/packed_green_terracotta_stairs"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "perit:block/andesite_cracked_shingles",
+    "side": "perit:block/andesite_cracked_shingles"
+  }
+}

@@ -1,3 +1,6 @@
 {
-  "parent": "perit:block/terracotta/shingles/light_blue_terracotta_shingle_slab"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "perit:block/light_blue_terracotta_shingle_slab"
+  }
 }

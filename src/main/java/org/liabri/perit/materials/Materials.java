@@ -5,7 +5,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 
 public class Materials {
-
     public static void init() {}
 
     public static final String[] COLOURS = {
