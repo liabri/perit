@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "perit:block/mossy_light_blue_terracotta_herringbone_bricks"
+  }
+}

@@ -32,6 +32,9 @@ public class StoneMaterial {
         Bricks,
         MossyBricks,
         CrackedBricks,
+        HerringboneBricks,
+        MossyHerringboneBricks,
+        CrackedHerringboneBricks,
         Briquettes,
         MossyBriquette,
         CrackedBriquette,
@@ -157,6 +160,27 @@ public class StoneMaterial {
             Blocks.register("cracked_" + this.NAME + "_brick_slab", new SlabBlock(CRACKED_BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_BRICKS.getLeft())), ITEM_GROUP);
             Blocks.register("cracked_" + this.NAME + "_brick_stairs", new StairsBlock(CRACKED_BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_BRICKS.getLeft())), ITEM_GROUP);
             Blocks.register("cracked_" + this.NAME + "_brick_wall", new WallBlock(CRACKED_BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_BRICKS.getLeft())), ITEM_GROUP);
+        }
+
+        if (!this.LIST.contains(Kinds.HerringboneBricks)) {
+            Pair<Block, Item> HERRINGBONE_BRICKS = Blocks.register(this.NAME + "_herringbone_bricks", new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
+            Blocks.register(this.NAME + "_herringbone_brick_slab", new SlabBlock(HERRINGBONE_BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(HERRINGBONE_BRICKS.getLeft())), ITEM_GROUP);
+            Blocks.register(this.NAME + "_herringbone_brick_stairs", new StairsBlock(HERRINGBONE_BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(HERRINGBONE_BRICKS.getLeft())), ITEM_GROUP);
+            Blocks.register(this.NAME + "_herringbone_brick_wall", new WallBlock(HERRINGBONE_BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(HERRINGBONE_BRICKS.getLeft())), ITEM_GROUP);
+        }
+
+        if (!this.LIST.contains(Kinds.MossyHerringboneBricks)) {
+            Pair<Block, Item> MOSSY_HERRINGBONE_BRICKS = Blocks.register("mossy_" + this.NAME + "_herringbone_bricks", new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
+            Blocks.register("mossy_" + this.NAME + "_herringbone_brick_slab", new SlabBlock(MOSSY_HERRINGBONE_BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(MOSSY_HERRINGBONE_BRICKS.getLeft())), ITEM_GROUP);
+            Blocks.register("mossy_" + this.NAME + "_herringbone_brick_stairs", new StairsBlock(MOSSY_HERRINGBONE_BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(MOSSY_HERRINGBONE_BRICKS.getLeft())), ITEM_GROUP);
+            Blocks.register("mossy_" + this.NAME + "_herringbone_brick_wall", new WallBlock(MOSSY_HERRINGBONE_BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(MOSSY_HERRINGBONE_BRICKS.getLeft())), ITEM_GROUP);
+        }
+
+        if (!this.LIST.contains(Kinds.CrackedHerringboneBricks)) {
+            Pair<Block, Item> CRACKED_HERRINGBONE_BRICKS = Blocks.register("cracked_" + this.NAME + "herringbone_bricks", new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
+            Blocks.register("cracked_" + this.NAME + "_herringbone_brick_slab", new SlabBlock(CRACKED_HERRINGBONE_BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_HERRINGBONE_BRICKS.getLeft())), ITEM_GROUP);
+            Blocks.register("cracked_" + this.NAME + "_herringbone_brick_stairs", new StairsBlock(CRACKED_HERRINGBONE_BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_HERRINGBONE_BRICKS.getLeft())), ITEM_GROUP);
+            Blocks.register("cracked_" + this.NAME + "_herringbone_brick_wall", new WallBlock(CRACKED_HERRINGBONE_BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_HERRINGBONE_BRICKS.getLeft())), ITEM_GROUP);
         }
 
         if (!this.LIST.contains(Kinds.Briquettes)) {

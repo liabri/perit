@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "perit:block/mossy_andesite_herringbone_brick_slab"
+    },
+    "type=double": {
+      "model": "perit:block/mossy_andesite_herringbone_brick_slab_double"
+    },
+    "type=top": {
+      "model": "perit:block/mossy_andesite_herringbone_brick_slab_top"
+    }
+  }
+}
