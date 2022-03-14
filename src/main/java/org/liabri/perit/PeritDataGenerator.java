@@ -15,7 +15,6 @@
  import net.minecraft.data.client.*;
  import net.minecraft.data.server.recipe.RecipeJsonProvider;
  import net.minecraft.tag.BlockTags;
- import net.minecraft.tag.ItemTags;
  import net.minecraft.util.Identifier;
  import net.minecraft.util.registry.Registry;
  import org.liabri.perit.blocks.*;
