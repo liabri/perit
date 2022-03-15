@@ -5,7 +5,10 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Pair;
-import org.liabri.perit.blocks.*;
+import org.liabri.perit.blocks.Blocks;
+import org.liabri.perit.blocks.SlabBlock;
+import org.liabri.perit.blocks.StairsBlock;
+import org.liabri.perit.blocks.WallBlock;
 
 import java.util.Arrays;
 import java.util.List;
@@ -74,7 +77,7 @@ public class StoneMaterial {
 
     public void register() {
         if (this.LIST.contains(Kinds.Smooth) == this.WHITELIST) {
-            Pair<Block, Item> SMOOTH = Blocks.register("smooth_" + this.NAME, new VariantBlock(BASE.getDefaultState(), FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
+            Pair<Block, Item> SMOOTH = Blocks.register("smooth_" + this.NAME, new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
             Blocks.register("smooth_" + this.NAME + "_slab", new SlabBlock(SMOOTH.getLeft().getDefaultState(), FabricBlockSettings.copy(SMOOTH.getLeft())), ITEM_GROUP);
             Blocks.register("smooth_" + this.NAME + "_stairs", new StairsBlock(SMOOTH.getLeft().getDefaultState(), FabricBlockSettings.copy(SMOOTH.getLeft())), ITEM_GROUP);
             Blocks.register("smooth_" + this.NAME + "_wall", new WallBlock(SMOOTH.getLeft().getDefaultState(), FabricBlockSettings.copy(SMOOTH.getLeft())), ITEM_GROUP);

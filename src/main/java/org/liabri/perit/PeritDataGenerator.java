@@ -17,7 +17,10 @@
  import net.minecraft.tag.BlockTags;
  import net.minecraft.util.Identifier;
  import net.minecraft.util.registry.Registry;
- import org.liabri.perit.blocks.*;
+ import org.liabri.perit.blocks.Blocks;
+ import org.liabri.perit.blocks.SlabBlock;
+ import org.liabri.perit.blocks.StairsBlock;
+ import org.liabri.perit.blocks.WallBlock;
 
  import java.util.function.Consumer;
 
