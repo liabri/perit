@@ -56,25 +56,7 @@ public class StoneMaterial {
 
         register();
     }
-
-//    public StoneMaterial(String name, AbstractBlock.Settings settings, ItemGroup ITEM_GROUP, Kinds[] blacklist) {
-//        this.NAME = name;
-//        this.LIST = Arrays.asList(blacklist);
-//        this.ITEM_GROUP = ITEM_GROUP;
-//        this.WHITELIST = false;
-//
-//        if (!this.LIST.contains(Kinds.Base)) {
-//            this.BASE = Blocks.register(this.NAME, new Block(settings), ITEM_GROUP).getLeft();
-//            Blocks.register(this.NAME + "_slab", new SlabBlock(BASE.getDefaultState(), FabricBlockSettings.copy(BASE)), ITEM_GROUP);
-//            Blocks.register(this.NAME + "_stairs", new StairsBlock(BASE.getDefaultState(), FabricBlockSettings.copy(BASE)), ITEM_GROUP);
-//            Blocks.register(this.NAME + "_wall", new WallBlock(BASE.getDefaultState(), FabricBlockSettings.copy(BASE)), ITEM_GROUP);
-//        } else {
-//            this.BASE = null;
-//        }
-//
-//        register();
-//    }
-
+    
     public void register() {
         if (this.LIST.contains(Kinds.Smooth) == this.WHITELIST) {
             Pair<Block, Item> SMOOTH = Blocks.register("smooth_" + this.NAME, new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
