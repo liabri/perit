@@ -60,11 +60,11 @@
             Blocks.blocks.forEach((block) -> {
                 String name = String.valueOf(block.getName());
 
-                if (name.contains("cracked_cut")) {
-                    if (block instanceof VariantBlock) {
-                        offerStonecuttingRecipe(exporter, block, ((VariantBlock) block).getBaseBlockState().getBlock());
-                    }
-                }
+//                if (name.contains("cracked_cut")) {
+//                    if (block instanceof VariantBlock) {
+//                        offerStonecuttingRecipe(exporter, block, ((VariantBlock) block).getBaseBlockState().getBlock());
+//                    }
+//                }
             });
 
 //            offerPlanksRecipe2(exporter, SIMPLE_BLOCK, ItemTags.TERRACOTTA);
