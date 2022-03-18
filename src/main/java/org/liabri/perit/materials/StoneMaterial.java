@@ -11,13 +11,7 @@ import org.liabri.perit.blocks.StairsBlock;
 import org.liabri.perit.blocks.WallBlock;
 
 public class StoneMaterial extends Material {
-//    private final String NAME;
-//    private final List<Kinds> LIST;
-//    private final Block BASE;
-//    private final ItemGroup ITEM_GROUP;
-//    private final boolean WHITELIST;
-
-    public enum Kinds implements org.liabri.perit.materials.Kinds {
+    public enum Kinds implements Material.Kinds {
         Base,
         Smooth,
         Cut,
@@ -44,13 +38,8 @@ public class StoneMaterial extends Material {
         Chiseled
     }
 
-    public StoneMaterial(String name, Block block, ItemGroup itemGroup, boolean whitelist, Kinds[] list) {
+    public StoneMaterial(String name, Block block, ItemGroup itemGroup, boolean whitelist, StoneMaterial.Kinds[] list) {
         super(name, block, itemGroup, whitelist, list);
-//        this.NAME = name;
-//        this.LIST = Arrays.asList(list);
-//        this.BASE = block;
-//        this.ITEM_GROUP = ITEM_GROUP;
-//        this.WHITELIST = whitelist;
     }
 
     @Override

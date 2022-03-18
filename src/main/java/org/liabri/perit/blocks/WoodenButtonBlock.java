@@ -1,4 +1,4 @@
-package net.fabricmc.example.blocks;
+package org.liabri.perit.blocks;
 
 public class WoodenButtonBlock extends net.minecraft.block.WoodenButtonBlock {
     public WoodenButtonBlock(Settings settings) {
