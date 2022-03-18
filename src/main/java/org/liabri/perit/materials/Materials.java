@@ -25,7 +25,7 @@ public class Materials {
             "yellow"
     };
 
-    public static final StoneMaterial[] stoneMaterials = new StoneMaterial[2];
+    public static final StoneMaterial[] stoneMaterials = new StoneMaterial[5];
 
     static {
         for (String colour: COLOURS) {
@@ -51,6 +51,24 @@ public class Materials {
         stoneMaterials[1] = new StoneMaterial( "andesite", Blocks.ANDESITE, ItemGroup.BUILDING_BLOCKS, false, new StoneMaterial.Kinds[]{
                 StoneMaterial.Kinds.Base,
                 StoneMaterial.Kinds.Polished,
+        });
+
+        stoneMaterials[2] = new StoneMaterial( "sandstone", Blocks.SANDSTONE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
+                StoneMaterial.Kinds.Polished,
+                StoneMaterial.Kinds.Bricks,
+                StoneMaterial.Kinds.Pillar
+        });
+
+        stoneMaterials[3] = new StoneMaterial( "red_sandstone", Blocks.SANDSTONE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
+                StoneMaterial.Kinds.Polished,
+                StoneMaterial.Kinds.Bricks,
+                StoneMaterial.Kinds.Pillar
+        });
+
+        stoneMaterials[4] = new StoneMaterial( "blackstone", Blocks.SANDSTONE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
+                StoneMaterial.Kinds.Smooth,
+                StoneMaterial.Kinds.Cut,
+                StoneMaterial.Kinds.Pillar
         });
     }
 }

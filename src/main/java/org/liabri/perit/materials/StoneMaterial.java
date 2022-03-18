@@ -10,17 +10,14 @@ import org.liabri.perit.blocks.SlabBlock;
 import org.liabri.perit.blocks.StairsBlock;
 import org.liabri.perit.blocks.WallBlock;
 
-import java.util.Arrays;
-import java.util.List;
+public class StoneMaterial extends Material {
+//    private final String NAME;
+//    private final List<Kinds> LIST;
+//    private final Block BASE;
+//    private final ItemGroup ITEM_GROUP;
+//    private final boolean WHITELIST;
 
-public class StoneMaterial {
-    private final String NAME;
-    private final List<Kinds> LIST;
-    private final Block BASE;
-    private final ItemGroup ITEM_GROUP;
-    private final boolean WHITELIST;
-
-    public enum Kinds {
+    public enum Kinds implements org.liabri.perit.materials.Kinds {
         Base,
         Smooth,
         Cut,
@@ -47,16 +44,16 @@ public class StoneMaterial {
         Chiseled
     }
 
-    public StoneMaterial(String name, Block block, ItemGroup ITEM_GROUP, boolean whitelist, Kinds[] list) {
-        this.NAME = name;
-        this.LIST = Arrays.asList(list);
-        this.BASE = block;
-        this.ITEM_GROUP = ITEM_GROUP;
-        this.WHITELIST = whitelist;
-
-        register();
+    public StoneMaterial(String name, Block block, ItemGroup itemGroup, boolean whitelist, Kinds[] list) {
+        super(name, block, itemGroup, whitelist, list);
+//        this.NAME = name;
+//        this.LIST = Arrays.asList(list);
+//        this.BASE = block;
+//        this.ITEM_GROUP = ITEM_GROUP;
+//        this.WHITELIST = whitelist;
     }
-    
+
+    @Override
     public void register() {
         if (this.LIST.contains(Kinds.Smooth) == this.WHITELIST) {
             Pair<Block, Item> SMOOTH = Blocks.register("smooth_" + this.NAME, new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
