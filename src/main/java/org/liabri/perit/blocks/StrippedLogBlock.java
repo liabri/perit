@@ -1,4 +1,4 @@
-package net.fabricmc.example.blocks;
+package org.liabri.perit.blocks;
 
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;

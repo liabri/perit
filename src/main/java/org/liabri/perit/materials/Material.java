@@ -15,10 +15,6 @@ public abstract class Material {
 
     public abstract void register();
 
-//    public enum Kinds {}
-
-
-
     public Material(String name, Block block, ItemGroup ITEM_GROUP, boolean whitelist, Kinds[] list) {
         this.NAME = name;
         this.LIST = Arrays.asList(list);
@@ -28,4 +24,6 @@ public abstract class Material {
 
         register();
     }
+
+    public interface Kinds {}
 }

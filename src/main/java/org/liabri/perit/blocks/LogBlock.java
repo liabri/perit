@@ -1,4 +1,4 @@
-package net.fabricmc.example.blocks;
+package org.liabri.perit.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
