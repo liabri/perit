@@ -69,6 +69,7 @@ public class Materials {
         new WoodMaterial("bamboo", Blocks.BAMBOO, ItemGroup.BUILDING_BLOCKS, true, new WoodMaterial.Kinds[]{
                 WoodMaterial.Kinds.Base,
                 WoodMaterial.Kinds.Door,
+                WoodMaterial.Kinds.Trapdoor,
                 WoodMaterial.Kinds.Fence,
                 WoodMaterial.Kinds.FenceGate
         });
@@ -78,6 +79,7 @@ public class Materials {
         new WoodMaterial("dry_bamboo", DRY_BAMBOO.getLeft(), ItemGroup.BUILDING_BLOCKS, true, new WoodMaterial.Kinds[]{
                 WoodMaterial.Kinds.Base,
                 WoodMaterial.Kinds.Door,
+                WoodMaterial.Kinds.Trapdoor,
                 WoodMaterial.Kinds.Fence,
                 WoodMaterial.Kinds.FenceGate
         });
