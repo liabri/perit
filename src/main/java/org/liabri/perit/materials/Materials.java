@@ -73,6 +73,7 @@ public class Materials {
                 WoodMaterial.Kinds.Ladder
         });
 
+        register("stripped_bamboo", new BambooBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
         register("stripped_bamboo_bundle", new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
         new WoodMaterial("stripped_bamboo", Blocks.BAMBOO, ItemGroup.BUILDING_BLOCKS, true, new WoodMaterial.Kinds[]{
                 WoodMaterial.Kinds.Planks,
@@ -81,7 +82,9 @@ public class Materials {
 //                WoodMaterial.Kinds.Fence,
 //                WoodMaterial.Kinds.FenceGate,
                 WoodMaterial.Kinds.Ladder,
-                WoodMaterial.Kinds.Bookshelf
+                WoodMaterial.Kinds.Bookshelf,
+                WoodMaterial.Kinds.Boat,
+                WoodMaterial.Kinds.Sign
         });
     }
 }

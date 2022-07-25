@@ -2,6 +2,7 @@ package org.liabri.perit.materials;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.vehicle.BoatEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Pair;
@@ -36,7 +37,8 @@ public class WoodMaterial extends Material {
         Bookcase,
         Crate,
         Lectern,
-        Chiseled
+        Chiseled,
+        Boat
     }
 
     public WoodMaterial(String name, Block block, ItemGroup itemGroup, boolean whitelist, WoodMaterial.Kinds[] list) {
@@ -51,6 +53,20 @@ public class WoodMaterial extends Material {
             org.liabri.perit.blocks.Blocks.register(this.NAME + "_stairs", new org.liabri.perit.blocks.StairsBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
         }
 
+        if (this.LIST.contains(Kinds.Planks) == this.WHITELIST) {
+            Pair<Block, Item> BASE = org.liabri.perit.blocks.Blocks.register(this.NAME + "_planks", new Block(FabricBlockSettings.copyOf(this.BASE)), ITEM_GROUP);
+            org.liabri.perit.blocks.Blocks.register(this.NAME + "_slab", new org.liabri.perit.blocks.SlabBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
+            org.liabri.perit.blocks.Blocks.register(this.NAME + "_stairs", new org.liabri.perit.blocks.StairsBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
+        }
+
+        if (this.LIST.contains(Kinds.Ladder) == this.WHITELIST) {
+            org.liabri.perit.blocks.Blocks.register(this.NAME + "_ladder", new LadderBlock(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
+        }
+
+        if (this.LIST.contains(Kinds.Bookshelf) == this.WHITELIST) {
+            org.liabri.perit.blocks.Blocks.register(this.NAME + "_bookshelf", new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
+        }
+
         if (this.LIST.contains(Kinds.Fence) == this.WHITELIST) {
             org.liabri.perit.blocks.Blocks.register(this.NAME + "_fence", new FenceBlock(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
         }
@@ -59,8 +75,12 @@ public class WoodMaterial extends Material {
             org.liabri.perit.blocks.Blocks.register(this.NAME + "_fence_gate", new FenceGateBlock(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
         }
 
-        if (this.LIST.contains(Kinds.Door) == this.WHITELIST) {
+        if (this.LIST.contains(Kinds.Boat) == this.WHITELIST) {
             org.liabri.perit.blocks.Blocks.register(this.NAME + "_door", new DoorBlock(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
+        }
+
+        if (this.LIST.contains(Kinds.Boat) == this.WHITELIST) {
+//            org.liabri.perit.blocks.Blocks.register(this.NAME + "_boat", new BoatEntity();
         }
 
         if (this.LIST.contains(Kinds.Trapdoor) == this.WHITELIST) {
