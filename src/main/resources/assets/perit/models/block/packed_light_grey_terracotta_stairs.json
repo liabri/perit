@@ -2,7 +2,7 @@
   "parent": "minecraft:block/stairs",
   "textures": {
     "bottom": "perit:block/packed_light_grey_terracotta",
-    "top": "perit:block/packed_light_grey_terracotta",
-    "side": "perit:block/packed_light_grey_terracotta"
+    "side": "perit:block/packed_light_grey_terracotta",
+    "top": "perit:block/packed_light_grey_terracotta"
   }
 }

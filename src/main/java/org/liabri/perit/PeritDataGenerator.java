@@ -38,7 +38,7 @@
         dataGenerator.addProvider(new TestItemTagProvider(dataGenerator, blockTagProvider));
 
         try {
-            new FabricTagProvider.DynamicRegistryTagProvider<>(dataGenerator, Registry.ITEM_KEY, "items", "Item Tags") {
+            new FabricTagProvider.DynamicRegistryTagProvider<>(dataGenerator, Registry.ITEM_KEY) {
                 @Override
                 protected void generateTags() {
                 }

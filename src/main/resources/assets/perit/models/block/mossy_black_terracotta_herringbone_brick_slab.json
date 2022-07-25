@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "perit:block/mossy_black_terracotta_herringbone_bricks",
-    "top": "perit:block/mossy_black_terracotta_herringbone_bricks",
-    "side": "perit:block/mossy_black_terracotta_herringbone_bricks"
-  }
-}

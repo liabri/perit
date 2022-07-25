@@ -2,7 +2,7 @@
   "parent": "minecraft:block/outer_stairs",
   "textures": {
     "bottom": "perit:block/packed_andesite",
-    "top": "perit:block/packed_andesite",
-    "side": "perit:block/packed_andesite"
+    "side": "perit:block/packed_andesite",
+    "top": "perit:block/packed_andesite"
   }
 }

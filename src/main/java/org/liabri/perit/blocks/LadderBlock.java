@@ -128,12 +128,10 @@ public class LadderBlock extends Block implements Waterloggable {
         return null;
     }
 
-    @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         BlockState blockState = state.with(BOTTOM, this.shouldBeBottom(world, pos));
         world.setBlockState(pos, blockState, 3);
     }
-
 
     private boolean shouldBeBottom(BlockView world, BlockPos pos) {
         return !world.getBlockState(pos.down()).isOf(this);

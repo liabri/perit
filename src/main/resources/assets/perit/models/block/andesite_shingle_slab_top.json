@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab_top",
   "textures": {
     "bottom": "perit:block/andesite_shingles",
-    "top": "perit:block/andesite_shingles",
-    "side": "perit:block/andesite_shingles"
+    "side": "perit:block/andesite_shingles",
+    "top": "perit:block/andesite_shingles"
   }
 }
