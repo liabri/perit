@@ -2,7 +2,7 @@
   "parent": "minecraft:block/inner_stairs",
   "textures": {
     "bottom": "perit:block/orange_terracotta_bricks",
-    "top": "perit:block/orange_terracotta_bricks",
-    "side": "perit:block/orange_terracotta_bricks"
+    "side": "perit:block/orange_terracotta_bricks",
+    "top": "perit:block/orange_terracotta_bricks"
   }
 }

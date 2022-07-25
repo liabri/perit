@@ -2,7 +2,7 @@
   "parent": "minecraft:block/stairs",
   "textures": {
     "bottom": "perit:block/yellow_terracotta_herringbone_bricks",
-    "top": "perit:block/yellow_terracotta_herringbone_bricks",
-    "side": "perit:block/yellow_terracotta_herringbone_bricks"
+    "side": "perit:block/yellow_terracotta_herringbone_bricks",
+    "top": "perit:block/yellow_terracotta_herringbone_bricks"
   }
 }

@@ -2,7 +2,7 @@
   "parent": "minecraft:block/stairs",
   "textures": {
     "bottom": "perit:block/orange_terracotta_shingles",
-    "top": "perit:block/orange_terracotta_shingles",
-    "side": "perit:block/orange_terracotta_shingles"
+    "side": "perit:block/orange_terracotta_shingles",
+    "top": "perit:block/orange_terracotta_shingles"
   }
 }

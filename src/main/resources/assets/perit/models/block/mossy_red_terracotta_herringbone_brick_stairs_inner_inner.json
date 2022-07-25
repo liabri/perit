@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "perit:block/mossy_red_terracotta_herringbone_bricks",
-    "top": "perit:block/mossy_red_terracotta_herringbone_bricks",
-    "side": "perit:block/mossy_red_terracotta_herringbone_bricks"
-  }
-}

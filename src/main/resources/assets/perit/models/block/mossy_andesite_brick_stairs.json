@@ -2,7 +2,7 @@
   "parent": "minecraft:block/stairs",
   "textures": {
     "bottom": "perit:block/mossy_andesite_bricks",
-    "top": "perit:block/mossy_andesite_bricks",
-    "side": "perit:block/mossy_andesite_bricks"
+    "side": "perit:block/mossy_andesite_bricks",
+    "top": "perit:block/mossy_andesite_bricks"
   }
 }

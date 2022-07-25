@@ -38,7 +38,8 @@ public class Materials {
             new StoneMaterial(colour + "_terracotta", Blocks.TERRACOTTA, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
                     StoneMaterial.Kinds.Bricks,
                     StoneMaterial.Kinds.HerringboneBricks,
-                    StoneMaterial.Kinds.Packed
+                    StoneMaterial.Kinds.Packed,
+                    StoneMaterial.Kinds.Shingles,
             });
         }
 
@@ -65,23 +66,22 @@ public class Materials {
                 StoneMaterial.Kinds.Pillar
         });
 
-        register("bamboo_spikes", new SpikesBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
+        register("bamboo_bundle", new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
         new WoodMaterial("bamboo", Blocks.BAMBOO, ItemGroup.BUILDING_BLOCKS, true, new WoodMaterial.Kinds[]{
-                WoodMaterial.Kinds.Base,
-                WoodMaterial.Kinds.Door,
-                WoodMaterial.Kinds.Trapdoor,
-                WoodMaterial.Kinds.Fence,
-                WoodMaterial.Kinds.FenceGate
+//                WoodMaterial.Kinds.Fence,
+//                WoodMaterial.Kinds.FenceGate,
+                WoodMaterial.Kinds.Ladder
         });
 
-        Pair<Block, Item> DRY_BAMBOO = register("dry_bamboo", new BambooBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
-        register("dry_bamboo_spikes", new SpikesBlock(FabricBlockSettings.copyOf(DRY_BAMBOO.getLeft())), ItemGroup.BUILDING_BLOCKS);
-        new WoodMaterial("dry_bamboo", DRY_BAMBOO.getLeft(), ItemGroup.BUILDING_BLOCKS, true, new WoodMaterial.Kinds[]{
-                WoodMaterial.Kinds.Base,
+        register("stripped_bamboo_bundle", new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
+        new WoodMaterial("stripped_bamboo", Blocks.BAMBOO, ItemGroup.BUILDING_BLOCKS, true, new WoodMaterial.Kinds[]{
+                WoodMaterial.Kinds.Planks,
                 WoodMaterial.Kinds.Door,
                 WoodMaterial.Kinds.Trapdoor,
-                WoodMaterial.Kinds.Fence,
-                WoodMaterial.Kinds.FenceGate
+//                WoodMaterial.Kinds.Fence,
+//                WoodMaterial.Kinds.FenceGate,
+                WoodMaterial.Kinds.Ladder,
+                WoodMaterial.Kinds.Bookshelf
         });
     }
 }

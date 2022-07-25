@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab",
   "textures": {
     "bottom": "perit:block/grey_terracotta_shingles",
-    "top": "perit:block/grey_terracotta_shingles",
-    "side": "perit:block/grey_terracotta_shingles"
+    "side": "perit:block/grey_terracotta_shingles",
+    "top": "perit:block/grey_terracotta_shingles"
   }
 }

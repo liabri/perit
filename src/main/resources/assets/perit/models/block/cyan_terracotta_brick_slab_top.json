@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab_top",
   "textures": {
     "bottom": "perit:block/cyan_terracotta_bricks",
-    "top": "perit:block/cyan_terracotta_bricks",
-    "side": "perit:block/cyan_terracotta_bricks"
+    "side": "perit:block/cyan_terracotta_bricks",
+    "top": "perit:block/cyan_terracotta_bricks"
   }
 }

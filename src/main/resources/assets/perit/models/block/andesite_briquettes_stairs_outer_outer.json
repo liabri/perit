@@ -2,7 +2,7 @@
   "parent": "minecraft:block/outer_stairs",
   "textures": {
     "bottom": "perit:block/andesite_briquettes",
-    "top": "perit:block/andesite_briquettes",
-    "side": "perit:block/andesite_briquettes"
+    "side": "perit:block/andesite_briquettes",
+    "top": "perit:block/andesite_briquettes"
   }
 }

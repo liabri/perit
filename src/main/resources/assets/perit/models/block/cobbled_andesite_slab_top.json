@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab_top",
   "textures": {
     "bottom": "perit:block/cobbled_andesite",
-    "top": "perit:block/cobbled_andesite",
-    "side": "perit:block/cobbled_andesite"
+    "side": "perit:block/cobbled_andesite",
+    "top": "perit:block/cobbled_andesite"
   }
 }
