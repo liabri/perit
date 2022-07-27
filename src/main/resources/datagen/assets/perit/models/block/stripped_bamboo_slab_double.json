@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "perit:block/stripped_bamboo_planks",
+    "side": "perit:block/stripped_bamboo_planks"
+  }
+}

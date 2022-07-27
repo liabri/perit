@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "perit:block/cyan_terracotta_herringbone_bricks",
+    "side": "perit:block/cyan_terracotta_herringbone_bricks"
+  }
+}

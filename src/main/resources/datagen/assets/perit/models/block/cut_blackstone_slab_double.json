@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "perit:block/cut_blackstone",
+    "side": "perit:block/cut_blackstone"
+  }
+}
