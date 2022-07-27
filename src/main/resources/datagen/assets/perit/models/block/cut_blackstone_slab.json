@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "perit:block/cut_blackstone",
+    "side": "perit:block/cut_blackstone",
+    "top": "perit:block/cut_blackstone"
+  }
+}

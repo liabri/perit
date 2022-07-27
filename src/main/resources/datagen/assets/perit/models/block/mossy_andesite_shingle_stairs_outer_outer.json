@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "perit:block/mossy_andesite_shingles",
+    "side": "perit:block/mossy_andesite_shingles",
+    "top": "perit:block/mossy_andesite_shingles"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "perit:block/cut_andesite",
+    "side": "perit:block/cut_andesite",
+    "top": "perit:block/cut_andesite"
+  }
+}

@@ -84,7 +84,8 @@ public class Materials {
                 WoodMaterial.Kinds.Ladder,
                 WoodMaterial.Kinds.Bookshelf,
                 WoodMaterial.Kinds.Boat,
-                WoodMaterial.Kinds.Sign
+                WoodMaterial.Kinds.Sign,
+                WoodMaterial.Kinds.Button,
         });
     }
 }

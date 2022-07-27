@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "perit:block/stripped_bamboo_slab"
+    },
+    "type=double": {
+      "model": "perit:block/stripped_bamboo_slab_double"
+    },
+    "type=top": {
+      "model": "perit:block/stripped_bamboo_slab_top"
+    }
+  }
+}

@@ -16,11 +16,9 @@
  import net.minecraft.data.server.recipe.RecipeJsonProvider;
  import net.minecraft.tag.BlockTags;
  import net.minecraft.util.Identifier;
+ import net.minecraft.util.registry.BuiltinRegistries;
  import net.minecraft.util.registry.Registry;
- import org.liabri.perit.blocks.Blocks;
- import org.liabri.perit.blocks.SlabBlock;
- import org.liabri.perit.blocks.StairsBlock;
- import org.liabri.perit.blocks.WallBlock;
+ import org.liabri.perit.blocks.*;
 
  import java.util.function.Consumer;
 
@@ -59,29 +57,14 @@
         protected void generateRecipes(Consumer<RecipeJsonProvider> exporter) {
             Blocks.blocks.forEach((block) -> {
                 String name = String.valueOf(block.getName());
-
 //                if (name.contains("cracked_cut")) {
 //                    if (block instanceof VariantBlock) {
 //                        offerStonecuttingRecipe(exporter, block, ((VariantBlock) block).getBaseBlockState().getBlock());
 //                    }
 //                }
             });
-
-//            offerPlanksRecipe2(exporter, SIMPLE_BLOCK, ItemTags.TERRACOTTA);
         }
     }
-
-//    private static class TestConditionalRecipeProvider extends FabricRecipeProvider {
-//        private TestConditionalRecipeProvider(FabricDataGenerator dataGenerator) {
-//            super(dataGenerator);
-//        }
-//
-//        @Override
-//        protected void generateRecipes(Consumer<RecipeJsonProvider> exporter) {
-//            ShapelessRecipeJsonBuilder.create(Items.GOLD_INGOT).input(Items.DIRT).criterion("has_dirt", conditionsFromItem(Items.DIRT)).offerTo(withConditions(exporter, NEVER_LOADED));
-//            ShapelessRecipeJsonBuilder.create(Items.DIAMOND).input(Items.STICK).criterion("has_stick", conditionsFromItem(Items.STICK)).offerTo(withConditions(exporter, ALWAYS_LOADED));
-//        }
-//    }
 
     private static class TestModelProvider extends FabricModelProvider {
         private TestModelProvider(FabricDataGenerator generator) {
@@ -147,6 +130,28 @@
             Blocks.blocks.forEach((block) -> {
                 if (block instanceof WallBlock wallBlock) {
                     getOrCreateTagBuilder(BlockTags.WALLS).add(wallBlock);
+                } else if (block instanceof LadderBlock ladderBlock) {
+                    getOrCreateTagBuilder(BlockTags.CLIMBABLE).add(ladderBlock);
+                } else if (block instanceof WoodenButtonBlock woodenButtonBlock) {
+                    getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS).add(woodenButtonBlock);
+                } else if (block instanceof DoorBlock doorBlock) {
+                    getOrCreateTagBuilder(BlockTags.WOODEN_DOORS).add(doorBlock);
+                } else if (block instanceof TrapdoorBlock trapdoorBlock) {
+                    getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS).add(trapdoorBlock);
+                } else if (block instanceof WoodenPressurePlateBlock woodenPressurePlateBlock) {
+                    getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES).add(woodenPressurePlateBlock);
+                } else if (block instanceof FenceBlock fenceBlock) {
+                    getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(fenceBlock);
+                } else if (block instanceof FenceGateBlock fenceGateBlock) {
+                    getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(fenceGateBlock);
+                } else if (block instanceof WoodenSlabBlock woodenSlabBlock) {
+                    getOrCreateTagBuilder(BlockTags.WOODEN_SLABS).add(woodenSlabBlock);
+                } else if (block instanceof WoodenStairsBlock woodenStairsBlock) {
+                    getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS).add(woodenStairsBlock);
+                } else if (block instanceof StairsBlock stairsBlock) {
+                    getOrCreateTagBuilder(BlockTags.STAIRS).add(stairsBlock);
+                } else if (block instanceof StairsBlock slabBlock) {
+                    getOrCreateTagBuilder(BlockTags.SLABS).add(slabBlock);
                 }
             });
         }
