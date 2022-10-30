@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "perit:block/smooth_granite",
+    "side": "perit:block/smooth_granite",
+    "top": "perit:block/smooth_granite"
+  }
+}

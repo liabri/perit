@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "perit:block/polished_purple_terracotta",
+    "side": "perit:block/polished_purple_terracotta",
+    "top": "perit:block/polished_purple_terracotta"
+  }
+}

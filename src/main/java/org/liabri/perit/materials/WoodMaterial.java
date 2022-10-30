@@ -49,14 +49,14 @@ public class WoodMaterial extends Material {
     public void register() {
         if (this.LIST.contains(Kinds.Base) == this.WHITELIST) {
             Pair<Block, Item> BASE = org.liabri.perit.blocks.Blocks.register(this.NAME + "_block", new Block(FabricBlockSettings.copyOf(this.BASE)), ITEM_GROUP);
-            org.liabri.perit.blocks.Blocks.register(this.NAME + "_slab", new org.liabri.perit.blocks.SlabBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
-            org.liabri.perit.blocks.Blocks.register(this.NAME + "_stairs", new org.liabri.perit.blocks.StairsBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
+            org.liabri.perit.blocks.Blocks.register(this.NAME + "_slab", new org.liabri.perit.blocks.WoodenSlabBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
+            org.liabri.perit.blocks.Blocks.register(this.NAME + "_stairs", new org.liabri.perit.blocks.WoodenStairsBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
         }
 
         if (this.LIST.contains(Kinds.Planks) == this.WHITELIST) {
             Pair<Block, Item> BASE = org.liabri.perit.blocks.Blocks.register(this.NAME + "_planks", new Block(FabricBlockSettings.copyOf(this.BASE)), ITEM_GROUP);
-            org.liabri.perit.blocks.Blocks.register(this.NAME + "_slab", new org.liabri.perit.blocks.SlabBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
-            org.liabri.perit.blocks.Blocks.register(this.NAME + "_stairs", new org.liabri.perit.blocks.StairsBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
+            org.liabri.perit.blocks.Blocks.register(this.NAME + "_slab", new org.liabri.perit.blocks.WoodenSlabBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
+            org.liabri.perit.blocks.Blocks.register(this.NAME + "_stairs", new org.liabri.perit.blocks.WoodenStairsBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
         }
 
         if (this.LIST.contains(Kinds.Ladder) == this.WHITELIST) {

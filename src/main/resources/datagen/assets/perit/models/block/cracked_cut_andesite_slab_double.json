@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "perit:block/cracked_cut_andesite",
-    "side": "perit:block/cracked_cut_andesite"
-  }
-}

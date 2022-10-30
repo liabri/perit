@@ -36,3 +36,4 @@ bin/
 run/
 remappedSrc/
 src/main/resources/.cache/
+temp/

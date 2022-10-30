@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "perit:block/smooth_calcite_slab"
+    },
+    "type=double": {
+      "model": "perit:block/smooth_calcite_slab_double"
+    },
+    "type=top": {
+      "model": "perit:block/smooth_calcite_slab_top"
+    }
+  }
+}

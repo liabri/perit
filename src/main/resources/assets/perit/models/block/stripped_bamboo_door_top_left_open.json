@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_left_open",
-  "textures": {
-    "bottom": "perit:block/stripped_bamboo_door_bottom",
-    "top": "perit:block/stripped_bamboo_door_top"
-  }
-}

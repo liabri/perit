@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "perit:block/polished_dripstone_slab"
+    },
+    "type=double": {
+      "model": "perit:block/polished_dripstone_slab_double"
+    },
+    "type=top": {
+      "model": "perit:block/polished_dripstone_slab_top"
+    }
+  }
+}

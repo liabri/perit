@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "perit:block/packed_andesite",
-    "side": "perit:block/packed_andesite",
-    "top": "perit:block/packed_andesite"
-  }
-}

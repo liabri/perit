@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "perit:block/polished_obsidian",
+    "side": "perit:block/polished_obsidian",
+    "top": "perit:block/polished_obsidian"
+  }
+}

@@ -8,6 +8,7 @@ import java.util.List;
 
 public abstract class Material {
     final String NAME;
+    final String TEXTURE_NAME;
     final List<Kinds> LIST;
     final Block BASE;
     final ItemGroup ITEM_GROUP;
@@ -17,6 +18,18 @@ public abstract class Material {
 
     public Material(String name, Block block, ItemGroup ITEM_GROUP, boolean whitelist, Kinds[] list) {
         this.NAME = name;
+        this.TEXTURE_NAME = null;
+        this.LIST = Arrays.asList(list);
+        this.BASE = block;
+        this.ITEM_GROUP = ITEM_GROUP;
+        this.WHITELIST = whitelist;
+
+        register();
+    }
+
+    public Material(String name, String textureName, Block block, ItemGroup ITEM_GROUP, boolean whitelist, Kinds[] list) {
+        this.NAME = name;
+        this.TEXTURE_NAME = textureName;
         this.LIST = Arrays.asList(list);
         this.BASE = block;
         this.ITEM_GROUP = ITEM_GROUP;

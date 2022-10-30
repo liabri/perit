@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "perit:block/smooth_obsidian",
+    "side": "perit:block/smooth_obsidian",
+    "top": "perit:block/smooth_obsidian"
+  }
+}
