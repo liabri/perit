@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "perit:block/packedgreen_terracotta_top",
+    "side": "perit:block/packedgreen_terracotta"
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "perit:block/stripped_bamboo_planks",
-    "side": "perit:block/stripped_bamboo_planks",
-    "top": "perit:block/stripped_bamboo_planks"
-  }
-}

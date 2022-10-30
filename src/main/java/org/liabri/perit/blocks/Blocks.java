@@ -15,6 +15,8 @@ import java.util.ArrayList;
 public class Blocks {
     public static ArrayList<Block> blocks = new ArrayList<>();
 
+    //maybe here make an Array of Pair<Block, Material> so I can know if wooden etc..., not sure if this will fix every tag
+
     public static void init() {}
 
     public static Block register(String path, Block block) {

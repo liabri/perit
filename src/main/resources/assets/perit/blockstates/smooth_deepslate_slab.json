@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "perit:block/smooth_deepslate_slab"
+    },
+    "type=double": {
+      "model": "perit:block/smooth_deepslate_slab_double"
+    },
+    "type=top": {
+      "model": "perit:block/smooth_deepslate_slab_top"
+    }
+  }
+}

@@ -2,13 +2,11 @@ package org.liabri.perit.materials;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Pair;
-import org.liabri.perit.blocks.Blocks;
-import org.liabri.perit.blocks.SlabBlock;
-import org.liabri.perit.blocks.StairsBlock;
-import org.liabri.perit.blocks.WallBlock;
+import org.liabri.perit.blocks.*;
 
 public class StoneMaterial extends Material {
     public enum Kinds implements Material.Kinds {
@@ -18,6 +16,7 @@ public class StoneMaterial extends Material {
         CrackedCut,
         Polished,
         CrackedPolished,
+        Packed,
         Cobbled,
         MossyCobbled,
         Shingles,
@@ -32,7 +31,6 @@ public class StoneMaterial extends Material {
         Briquettes,
         MossyBriquettes,
         CrackedBriquettes,
-        Packed,
         Pillar,
         Column,
         Chiseled
@@ -52,14 +50,14 @@ public class StoneMaterial extends Material {
         }
 
         if (this.LIST.contains(Kinds.Cut) == this.WHITELIST) {
-            Pair<Block, Item> CUT = Blocks.register("cut_" + this.NAME, new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
+            Pair<Block, Item> CUT = Blocks.register("cut_" + this.NAME, new PillarBlock(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
             Blocks.register("cut_" + this.NAME + "_slab", new SlabBlock(CUT.getLeft().getDefaultState(), FabricBlockSettings.copy(CUT.getLeft())), ITEM_GROUP);
             Blocks.register("cut_" + this.NAME + "_stairs", new StairsBlock(CUT.getLeft().getDefaultState(), FabricBlockSettings.copy(CUT.getLeft())), ITEM_GROUP);
             Blocks.register("cut_" + this.NAME + "_wall", new WallBlock(CUT.getLeft().getDefaultState(), FabricBlockSettings.copy(CUT.getLeft())), ITEM_GROUP);
         }
 
         if (this.LIST.contains(Kinds.CrackedCut) == this.WHITELIST) {
-            Pair<Block, Item> CRACKED_CUT = Blocks.register("cracked_cut_" + this.NAME, new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
+            Pair<Block, Item> CRACKED_CUT = Blocks.register("cracked_cut_" + this.NAME, new PillarBlock(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
             Blocks.register("cracked_cut_" + this.NAME + "_slab", new SlabBlock(CRACKED_CUT.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_CUT.getLeft())), ITEM_GROUP);
             Blocks.register("cracked_cut_" + this.NAME + "_stairs", new StairsBlock(CRACKED_CUT.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_CUT.getLeft())), ITEM_GROUP);
             Blocks.register("cracked_cut_" + this.NAME + "_wall", new WallBlock(CRACKED_CUT.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_CUT.getLeft())), ITEM_GROUP);
@@ -77,6 +75,13 @@ public class StoneMaterial extends Material {
             Blocks.register("cracked_polished_" + this.NAME + "_slab", new SlabBlock(CRACKED_POLISHED.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_POLISHED.getLeft())), ITEM_GROUP);
             Blocks.register("cracked_polished_" + this.NAME + "_stairs", new StairsBlock(CRACKED_POLISHED.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_POLISHED.getLeft())), ITEM_GROUP);
             Blocks.register("cracked_polished_" + this.NAME + "_wall", new WallBlock(CRACKED_POLISHED.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_POLISHED.getLeft())), ITEM_GROUP);
+        }
+
+        if (this.LIST.contains(Kinds.Packed) == this.WHITELIST) {
+            Pair<Block, Item> PACKED = Blocks.register("packed" + this.NAME, new PillarBlock(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
+            Blocks.register("packed" + this.NAME + "_slab", new SlabBlock(PACKED.getLeft().getDefaultState(), FabricBlockSettings.copy(PACKED.getLeft())), ITEM_GROUP);
+            Blocks.register("packed" + this.NAME + "_stairs", new StairsBlock(PACKED.getLeft().getDefaultState(), FabricBlockSettings.copy(PACKED.getLeft())), ITEM_GROUP);
+            Blocks.register("packed" + this.NAME + "_wall", new WallBlock(PACKED.getLeft().getDefaultState(), FabricBlockSettings.copy(PACKED.getLeft())), ITEM_GROUP);
         }
 
         if (this.LIST.contains(Kinds.Cobbled) == this.WHITELIST) {
@@ -175,13 +180,6 @@ public class StoneMaterial extends Material {
             Blocks.register("cracked_" + this.NAME + "_briquettes_slab", new SlabBlock(CRACKED_BRIQUETTES.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_BRIQUETTES.getLeft())), ITEM_GROUP);
             Blocks.register("cracked_" + this.NAME + "_briquettes_stairs", new StairsBlock(CRACKED_BRIQUETTES.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_BRIQUETTES.getLeft())), ITEM_GROUP);
             Blocks.register("cracked_" + this.NAME + "_briquettes_wall", new WallBlock(CRACKED_BRIQUETTES.getLeft().getDefaultState(), FabricBlockSettings.copy(CRACKED_BRIQUETTES.getLeft())), ITEM_GROUP);
-        }
-
-        if (this.LIST.contains(Kinds.Packed) == this.WHITELIST) {
-            Pair<Block, Item> PACKED = Blocks.register("packed_" + this.NAME, new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
-            Blocks.register("packed_" + this.NAME + "_slab", new SlabBlock(PACKED.getLeft().getDefaultState(), FabricBlockSettings.copy(PACKED.getLeft())), ITEM_GROUP);
-            Blocks.register("packed_" + this.NAME + "_stairs", new StairsBlock(PACKED.getLeft().getDefaultState(), FabricBlockSettings.copy(PACKED.getLeft())), ITEM_GROUP);
-            Blocks.register("packed_" + this.NAME + "_wall", new WallBlock(PACKED.getLeft().getDefaultState(), FabricBlockSettings.copy(PACKED.getLeft())), ITEM_GROUP);
         }
 
         if (this.LIST.contains(Kinds.Chiseled) == this.WHITELIST) {

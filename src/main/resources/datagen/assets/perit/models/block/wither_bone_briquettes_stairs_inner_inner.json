@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "perit:block/wither_bone_briquettes",
+    "side": "perit:block/wither_bone_briquettes",
+    "top": "perit:block/wither_bone_briquettes"
+  }
+}

@@ -8,6 +8,7 @@
  import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
  import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
  import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
+ import net.minecraft.block.*;
  import net.minecraft.block.DoorBlock;
  import net.minecraft.block.FenceBlock;
  import net.minecraft.block.FenceGateBlock;
@@ -19,6 +20,12 @@
  import net.minecraft.util.registry.BuiltinRegistries;
  import net.minecraft.util.registry.Registry;
  import org.liabri.perit.blocks.*;
+ import org.liabri.perit.blocks.Blocks;
+ import org.liabri.perit.blocks.LadderBlock;
+ import org.liabri.perit.blocks.SlabBlock;
+ import org.liabri.perit.blocks.StairsBlock;
+ import org.liabri.perit.blocks.WallBlock;
+ import org.liabri.perit.blocks.WoodenButtonBlock;
 
  import java.util.function.Consumer;
 
@@ -89,14 +96,25 @@
                     BlockStateSupplier stairs = BlockStateModelGenerator.createStairsBlockState(stairsBlock, identifier_inner, identifier, identifier_outer);
                     blockStateModelGenerator.blockStateCollector.accept(stairs);
                 } else if (block instanceof WallBlock wallBlock) {
-                    TextureMap textureMap = TextureMap.all(wallBlock.getBaseBlockState().getBlock());
-                    Identifier identifier = Models.TEMPLATE_WALL_POST.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
-                    Identifier identifier2 = Models.TEMPLATE_WALL_SIDE.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
-                    Identifier identifier3 = Models.TEMPLATE_WALL_SIDE_TALL.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
-                    BlockStateSupplier wall = BlockStateModelGenerator.createWallBlockState(wallBlock, identifier, identifier2, identifier3);
-                    blockStateModelGenerator.blockStateCollector.accept(wall);
-                    Identifier identifier4 = Models.WALL_INVENTORY.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
-                    blockStateModelGenerator.registerParentedItemModel(wallBlock, identifier4);
+                    if (wallBlock.getTextureName()!=null) {
+                        TextureMap textureMap = TextureMap.all(wallBlock.getBaseBlockState().getBlock());
+                        Identifier identifier = Models.TEMPLATE_WALL_POST.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
+                        Identifier identifier2 = Models.TEMPLATE_WALL_SIDE.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
+                        Identifier identifier3 = Models.TEMPLATE_WALL_SIDE_TALL.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
+                        BlockStateSupplier wall = BlockStateModelGenerator.createWallBlockState(wallBlock, identifier, identifier2, identifier3);
+                        blockStateModelGenerator.blockStateCollector.accept(wall);
+                        Identifier identifier4 = Models.WALL_INVENTORY.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
+                        blockStateModelGenerator.registerParentedItemModel(wallBlock, identifier4);
+                    } else {
+                        TextureMap textureMap = TextureMap.all(wallBlock.getBaseBlockState().getBlock());
+                        Identifier identifier = Models.TEMPLATE_WALL_POST.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
+                        Identifier identifier2 = Models.TEMPLATE_WALL_SIDE.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
+                        Identifier identifier3 = Models.TEMPLATE_WALL_SIDE_TALL.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
+                        BlockStateSupplier wall = BlockStateModelGenerator.createWallBlockState(wallBlock, identifier, identifier2, identifier3);
+                        blockStateModelGenerator.blockStateCollector.accept(wall);
+                        Identifier identifier4 = Models.WALL_INVENTORY.upload(wallBlock, textureMap, blockStateModelGenerator.modelCollector);
+                        blockStateModelGenerator.registerParentedItemModel(wallBlock, identifier4);
+                    }
                 } else if (block instanceof DoorBlock doorBlock) {
                     blockStateModelGenerator.registerDoor(doorBlock);
                 } else if (block instanceof TrapdoorBlock trapdoorBlock) {
@@ -107,6 +125,16 @@
 //                    fenceGateBlocks.add(fenceGateBlock);
 //                } else if (block instanceof  WallBlock wallBlock) {
 //                  blockStateModelGenerator.register
+                } else if (block instanceof PillarBlock pillarBlock) {
+                    blockStateModelGenerator.registerAxisRotated(pillarBlock, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+
+//                    TextureMap textureMap = TextureMap.all(pillarBlock);
+//                    textureMap.put(TextureKey.SIDE, TextureMap.getId(net.minecraft.block.Blocks.CUT_SANDSTONE));
+//                    textureMap.put(TextureKey.TOP, TextureMap.getId(net.minecraft.block.Blocks.QUARTZ_BLOCK));
+//
+//                    Identifier identifier = Models.CUBE_BOTTOM_TOP.upload(pillarBlock, textureMap, blockStateModelGenerator.modelCollector);
+//                    BlockStateSupplier blockStateSupplier = BlockStateModelGenerator.createSingletonBlockState(pillarBlock, identifier);
+//                    blockStateModelGenerator.blockStateCollector.accept(blockStateSupplier);
                 } else {
                     blockStateModelGenerator.registerSimpleCubeAll(block);
                 }

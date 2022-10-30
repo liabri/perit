@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "perit:block/packedgreen_terracotta",
+    "side": "perit:block/packedgreen_terracotta",
+    "top": "perit:block/packedgreen_terracotta"
+  }
+}
