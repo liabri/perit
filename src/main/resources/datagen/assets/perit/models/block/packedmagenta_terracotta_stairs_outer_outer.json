@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "perit:block/packedmagenta_terracotta",
-    "side": "perit:block/packedmagenta_terracotta",
-    "top": "perit:block/packedmagenta_terracotta"
-  }
-}

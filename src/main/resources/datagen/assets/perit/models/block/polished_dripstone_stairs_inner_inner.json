@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "perit:block/polished_dripstone",
-    "side": "perit:block/polished_dripstone",
-    "top": "perit:block/polished_dripstone"
-  }
-}

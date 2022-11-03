@@ -1,18 +1,27 @@
 package org.liabri.perit.materials;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.BambooBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Pair;
-import org.liabri.perit.blocks.SpikesBlock;
 
-import static org.liabri.perit.blocks.Blocks.register;
+import java.util.ArrayList;
 
 public class Materials {
+
+    public static ArrayList<Material> materials = new ArrayList<>();
     public static void init() {}
+
+
+
+//    public static void generate_recipes(Consumer<RecipeJsonProvider> exporter) {
+//        Materials.materials.forEach((material -> {
+//            if(material instanceof StoneMaterial) {
+//                ((StoneMaterial) material).generate_recipes(exporter);
+//            } else if(material instanceof WoodMaterial) {
+//                ((WoodMaterial) material).generate_recipes(exporter);
+//            }
+//        }));
+//    }
 
     public static final String[] COLOURS = {
             "black",
@@ -33,6 +42,7 @@ public class Materials {
             "yellow"
     };
 
+    // move to CONCRETE material
     public static final Block[] CONCRETES = {
             Blocks.BLACK_CONCRETE,
             Blocks.BROWN_CONCRETE,
@@ -55,285 +65,289 @@ public class Materials {
     static {
         // Terracotta
         for (String colour: COLOURS) {
-            new StoneMaterial(colour + "_terracotta", Blocks.TERRACOTTA, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                    StoneMaterial.Kinds.Bricks,
-                    StoneMaterial.Kinds.HerringboneBricks,
-                    StoneMaterial.Kinds.Shingles,
-                    StoneMaterial.Kinds.Polished,
-                    StoneMaterial.Kinds.Packed,
-            });
+            materials.add(new StoneMaterial(colour + "_terracotta", Blocks.TERRACOTTA, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                    StoneMaterial.Kind.Bricks,
+                    StoneMaterial.Kind.HerringboneBricks,
+                    StoneMaterial.Kind.Shingles,
+                    StoneMaterial.Kind.Polished,
+                    StoneMaterial.Kind.Packed,
+            }));
         }
 
         // Concrete
         for(int i=0; i< CONCRETES.length; i++) {
-            new GenericMaterial(COLOURS[i] + "_concrete", CONCRETES[i], ItemGroup.BUILDING_BLOCKS, true, new GenericMaterial.Kinds[]{
-                    GenericMaterial.Kinds.Stairs,
-                    GenericMaterial.Kinds.Slabs,
-                    GenericMaterial.Kinds.Walls
-            });
+            materials.add(new GenericMaterial(COLOURS[i] + "_concrete", CONCRETES[i], ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
+                    GenericMaterial.Kind.Stairs,
+                    GenericMaterial.Kind.Slab,
+                    GenericMaterial.Kind.Walls
+            }));
         }
 
         // Andesite
-        new StoneMaterial("andesite", Blocks.ANDESITE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("andesite", Blocks.ANDESITE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Diorite
-        new StoneMaterial("diorite", Blocks.DIORITE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("diorite", Blocks.DIORITE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Granite
-        new StoneMaterial("granite", Blocks.GRANITE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("granite", Blocks.GRANITE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Tuff
-        new StoneMaterial("tuff", Blocks.TUFF, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("tuff", Blocks.TUFF, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Calcite
-        new StoneMaterial("calcite", Blocks.CALCITE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("calcite", Blocks.CALCITE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Basalt
-        new StoneMaterial("basalt", Blocks.BASALT, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-        });
+        materials.add(new StoneMaterial("basalt", Blocks.BASALT, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+        }));
 
         // Dripstone
-        new StoneMaterial("dripstone", Blocks.DRIPSTONE_BLOCK, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("dripstone", Blocks.DRIPSTONE_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Deepslate
-        new StoneMaterial("deepslate", Blocks.DEEPSLATE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("deepslate", Blocks.DEEPSLATE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Netherrack
-        new StoneMaterial("netherrack", Blocks.NETHERRACK, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("netherrack", Blocks.NETHERRACK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Nether bricks
-        new StoneMaterial("nether_brick", Blocks.NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("nether_brick", Blocks.NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Pillar,
+        }));
 
-        new StoneMaterial("nether_bricks", Blocks.NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Chiseled,
-        });
+        materials.add(new StoneMaterial("nether_bricks", Blocks.NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Chiseled,
+        }));
+
+        // Blue nether bricks
+        materials.add(new StoneMaterial("nether_bricks", Blocks.NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Base,
+        }));
 
         // Red nether bricks
-        new StoneMaterial("red_nether_brick", Blocks.RED_NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("red_nether_brick", Blocks.RED_NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Pillar,
+        }));
 
-        new StoneMaterial("red_nether_bricks", Blocks.RED_NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Chiseled,
-        });
+        materials.add(new StoneMaterial("red_nether_bricks", Blocks.RED_NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Chiseled,
+        }));
 
         // Bone
-        new StoneMaterial("bone", Blocks.BONE_BLOCK, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("bone", Blocks.BONE_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Wither Bone
-        new StoneMaterial("wither_bone", Blocks.BONE_BLOCK, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[] {
-                StoneMaterial.Kinds.Base,
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("withered_bone", Blocks.BONE_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[] {
+                StoneMaterial.Kind.Base,
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Ice
-        new StoneMaterial("ice", Blocks.ICE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("ice", Blocks.ICE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Obsidian
-        new StoneMaterial("obsidian", Blocks.OBSIDIAN, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("obsidian", Blocks.OBSIDIAN, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Soul Sandstone
-        new StoneMaterial("soul_sandstone", Blocks.SANDSTONE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Base,
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Cut,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("soul_sandstone", Blocks.SANDSTONE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Base,
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Cut,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Sandstone
-        new StoneMaterial("sandstone", Blocks.SANDSTONE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("sandstone", Blocks.SANDSTONE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Red Sandstone
-        new StoneMaterial("red_sandstone", Blocks.RED_SANDSTONE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Pillar,
-        });
+        materials.add(new StoneMaterial("red_sandstone", Blocks.RED_SANDSTONE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Pillar,
+        }));
 
         // Quartz
-        new GenericMaterial("quartz", "side", Blocks.QUARTZ_BLOCK, ItemGroup.BUILDING_BLOCKS, true, new GenericMaterial.Kinds[]{
-                GenericMaterial.Kinds.Walls
-        });
+        materials.add(new GenericMaterial("quartz", "side", Blocks.QUARTZ_BLOCK, ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
+                GenericMaterial.Kind.Walls
+        }));
 
-        new GenericMaterial("smooth_quartz", Blocks.SMOOTH_QUARTZ, ItemGroup.BUILDING_BLOCKS, true, new GenericMaterial.Kinds[]{
-                GenericMaterial.Kinds.Walls
-        });
+        materials.add(new GenericMaterial("smooth_quartz", Blocks.SMOOTH_QUARTZ, ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
+                GenericMaterial.Kind.Walls
+        }));
 
-        new GenericMaterial("quartz_bricks", Blocks.QUARTZ_BRICKS, ItemGroup.BUILDING_BLOCKS, true, new GenericMaterial.Kinds[]{
-                GenericMaterial.Kinds.Stairs,
-                GenericMaterial.Kinds.Slabs,
-                GenericMaterial.Kinds.Walls
-        });
+        materials.add(new GenericMaterial("quartz_bricks", Blocks.QUARTZ_BRICKS, ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
+                GenericMaterial.Kind.Stairs,
+                GenericMaterial.Kind.Slab,
+                GenericMaterial.Kind.Walls
+        }));
 
-        new StoneMaterial( "quartz", Blocks.QUARTZ_BLOCK, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Briquettes,
-        });
+        materials.add(new StoneMaterial( "quartz", Blocks.QUARTZ_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Briquettes,
+        }));
 
         // Purpur
-        new GenericMaterial("purpur", Blocks.PURPUR_BLOCK, ItemGroup.BUILDING_BLOCKS, true, new GenericMaterial.Kinds[]{
-                GenericMaterial.Kinds.Walls
-        });
+        materials.add(new GenericMaterial("purpur", Blocks.PURPUR_BLOCK, ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
+                GenericMaterial.Kind.Walls
+        }));
 
-        new StoneMaterial( "purpur", Blocks.PURPUR_BLOCK, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Bricks,
-                StoneMaterial.Kinds.Chiseled,
-        });
+        materials.add(new StoneMaterial( "purpur", Blocks.PURPUR_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Chiseled,
+        }));
 
         // End stone
-        new GenericMaterial("end_stone", Blocks.END_STONE, ItemGroup.BUILDING_BLOCKS, true, new GenericMaterial.Kinds[]{
-                GenericMaterial.Kinds.Stairs,
-                GenericMaterial.Kinds.Slabs,
-                GenericMaterial.Kinds.Walls
-        });
+        materials.add(new GenericMaterial("end_stone", Blocks.END_STONE, ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
+                GenericMaterial.Kind.Stairs,
+                GenericMaterial.Kind.Slab,
+                GenericMaterial.Kind.Walls
+        }));
 
-        new StoneMaterial( "end_stone", Blocks.END_STONE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Pillar
-        });
+        materials.add(new StoneMaterial( "end_stone", Blocks.END_STONE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Pillar
+        }));
 
         // Prismarine
-        new StoneMaterial( "prismarine", Blocks.PRISMARINE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Pillar
-        });
+        materials.add(new StoneMaterial( "prismarine", Blocks.PRISMARINE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Pillar
+        }));
 
         // Dark Prismarine
-        new GenericMaterial("dark_prismarine", Blocks.DARK_PRISMARINE, ItemGroup.BUILDING_BLOCKS, true, new GenericMaterial.Kinds[]{
-                GenericMaterial.Kinds.Walls
-        });
+        materials.add(new GenericMaterial("dark_prismarine", Blocks.DARK_PRISMARINE, ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
+                GenericMaterial.Kind.Walls
+        }));
 
-        new StoneMaterial( "dark_prismarine", Blocks.DARK_PRISMARINE, ItemGroup.BUILDING_BLOCKS, true, new StoneMaterial.Kinds[]{
-                StoneMaterial.Kinds.Smooth,
-                StoneMaterial.Kinds.Polished,
-                StoneMaterial.Kinds.Chiseled,
-                StoneMaterial.Kinds.Briquettes,
-                StoneMaterial.Kinds.Pillar
-        });
+        materials.add(new StoneMaterial( "dark_prismarine", Blocks.DARK_PRISMARINE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Pillar
+        }));
 
 //
 //        register("bamboo_bundle", new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
-//        new WoodMaterial("bamboo", Blocks.BAMBOO, ItemGroup.BUILDING_BLOCKS, true, new WoodMaterial.Kinds[]{
-////                WoodMaterial.Kinds.Fence,
-////                WoodMaterial.Kinds.FenceGate,
-//                WoodMaterial.Kinds.Ladder
-//        });
+//        materials.add(new WoodMaterial("bamboo", Blocks.BAMBOO, ItemGroup.BUILDING_BLOCKS, new WoodMaterial.Kind[]{
+////                WoodMaterial.Kind.Fence,
+////                WoodMaterial.Kind.FenceGate,
+//                WoodMaterial.Kind.Ladder
+//        }));
 //
 //        register("stripped_bamboo", new BambooBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
 //        register("stripped_bamboo_bundle", new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO)), ItemGroup.BUILDING_BLOCKS);
-//        new WoodMaterial("stripped_bamboo", Blocks.BAMBOO, ItemGroup.BUILDING_BLOCKS, true, new WoodMaterial.Kinds[]{
-//                WoodMaterial.Kinds.Planks,
-//                WoodMaterial.Kinds.Door,
-//                WoodMaterial.Kinds.Trapdoor,
-////                WoodMaterial.Kinds.Fence,
-////                WoodMaterial.Kinds.FenceGate,
-//                WoodMaterial.Kinds.Ladder,
-//                WoodMaterial.Kinds.Bookshelf,
-//                WoodMaterial.Kinds.Boat,
-//                WoodMaterial.Kinds.Sign,
-//                WoodMaterial.Kinds.Button,
-//        });
+//        materials.add(new WoodMaterial("stripped_bamboo", Blocks.BAMBOO, ItemGroup.BUILDING_BLOCKS, new WoodMaterial.Kind[]{
+//                WoodMaterial.Kind.Planks,
+//                WoodMaterial.Kind.Door,
+//                WoodMaterial.Kind.Trapdoor,
+////                WoodMaterial.Kind.Fence,
+////                WoodMaterial.Kind.FenceGate,
+//                WoodMaterial.Kind.Ladder,
+//                WoodMaterial.Kind.Bookshelf,
+//                WoodMaterial.Kind.Boat,
+//                WoodMaterial.Kind.Sign,
+//                WoodMaterial.Kind.Button,
+//        }));
     }
 }
 

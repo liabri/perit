@@ -17,9 +17,5 @@ public class Perit implements ModInitializer {
 	}
 
 	@Override
-	public void onInitialize() {
-		Blocks.init();
-		Materials.init();
-		Items.init();
-	}
+	public void onInitialize() { Materials.init(); }
 }

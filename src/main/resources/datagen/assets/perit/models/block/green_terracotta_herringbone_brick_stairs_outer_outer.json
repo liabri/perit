@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "perit:block/green_terracotta_herringbone_bricks",
-    "side": "perit:block/green_terracotta_herringbone_bricks",
-    "top": "perit:block/green_terracotta_herringbone_bricks"
-  }
-}

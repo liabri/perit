@@ -12,11 +12,12 @@ import static org.liabri.perit.Perit.id;
 public class Renderers {
     public static void init() {}
 
-    static {
-        for (Block block : Blocks.blocks) {
-            if (Objects.equals(block.getLootTableId().getPath(), "blocks/stripped_bamboo_door")) {
-                BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
-            }
-        }
-    }
+//    static {
+    //for every block in every material instead.
+//        for (Block block : Blocks.blocks) {
+//            if (Objects.equals(block.getLootTableId().getPath(), "blocks/stripped_bamboo_door")) {
+//                BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
+//            }
+//        }
+//    }
 }
