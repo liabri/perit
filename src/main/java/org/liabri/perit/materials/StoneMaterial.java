@@ -54,10 +54,17 @@ public class StoneMaterial extends Material {
     public void generate_recipes(Consumer<RecipeJsonProvider> exporter) {
         for(Map.Entry<Material.Kind, Pair<Block, Item>> bi : blocks.entrySet()) {
             System.out.println("GENERATING RECIPE FOR : " + bi.getValue().getLeft().getName());
-            if (Kind.Smooth.equals(bi.getKey())) {
-                CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(blocks.get(Kind.Base).getLeft()), bi.getValue().getRight(), 0.1F, 200).criterion("has_stone", conditionsFromItem(blocks.get(Kind.Base).getLeft())).offerTo(exporter);
+
+            System.out.println("BLOCKS: " + blocks);
+            System.out.println("\n\n\n\n\n\n-----------------------");
+
+            if (bi.getKey().equals(Kind.Polished)) {
+                offerStonecuttingRecipe(exporter, bi.getValue().getRight(), this.BASE, 1);
             }
-//            else if (Kind.Polished.equals(bi.getKey())) {
+
+//            if (Kind.Smooth.equals(bi.getKey())) {
+//                CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(blocks.get(Kind.Base).getLeft()), bi.getValue().getRight(), 0.1F, 200).criterion("has_stone", conditionsFromItem(blocks.get(Kind.Base).getLeft())).offerTo(exporter);
+//            } else if (Kind.Polished.equals(bi.getKey())) {
 //                offerStonecuttingRecipe(exporter, bi.getValue().getRight(), blocks.get(Kind.Base).getLeft(), 1);
 //            }
         }
@@ -74,10 +81,10 @@ public class StoneMaterial extends Material {
         }
 
         if (this.LIST.contains(Kind.Smooth)) {
-            Pair<Block, Item> SMOOTH = register(Kind.Base,"smooth_" + this.COMPOSE_NAME, new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
-            register(Kind.Base,"smooth_" + this.COMPOSE_NAME + "_slab", new SlabBlock(SMOOTH.getLeft().getDefaultState(), FabricBlockSettings.copy(SMOOTH.getLeft())), ITEM_GROUP);
-            register(Kind.Base,"smooth_" + this.COMPOSE_NAME + "_stairs", new StairsBlock(SMOOTH.getLeft().getDefaultState(), FabricBlockSettings.copy(SMOOTH.getLeft())), ITEM_GROUP);
-            register(Kind.Base,"smooth_" + this.COMPOSE_NAME + "_wall", new WallBlock(SMOOTH.getLeft().getDefaultState(), FabricBlockSettings.copy(SMOOTH.getLeft())), ITEM_GROUP);
+            Pair<Block, Item> SMOOTH = register(Kind.Smooth,"smooth_" + this.COMPOSE_NAME, new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
+            register(Kind.Smooth,"smooth_" + this.COMPOSE_NAME + "_slab", new SlabBlock(SMOOTH.getLeft().getDefaultState(), FabricBlockSettings.copy(SMOOTH.getLeft())), ITEM_GROUP);
+            register(Kind.Smooth,"smooth_" + this.COMPOSE_NAME + "_stairs", new StairsBlock(SMOOTH.getLeft().getDefaultState(), FabricBlockSettings.copy(SMOOTH.getLeft())), ITEM_GROUP);
+            register(Kind.Smooth,"smooth_" + this.COMPOSE_NAME + "_wall", new WallBlock(SMOOTH.getLeft().getDefaultState(), FabricBlockSettings.copy(SMOOTH.getLeft())), ITEM_GROUP);
         }
 
         if (this.LIST.contains(Kind.Cut)) {
