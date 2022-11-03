@@ -53,20 +53,13 @@ public class StoneMaterial extends Material {
     @Override
     public void generate_recipes(Consumer<RecipeJsonProvider> exporter) {
         for(Map.Entry<Material.Kind, Pair<Block, Item>> bi : blocks.entrySet()) {
-            System.out.println("GENERATING RECIPE FOR : " + bi.getValue().getLeft().getName());
-
-            System.out.println("BLOCKS: " + blocks);
-            System.out.println("\n\n\n\n\n\n-----------------------");
-
-            if (bi.getKey().equals(Kind.Polished)) {
+            if (bi.getValue().getLeft() instanceof SlabBlock) {
+                offerStonecuttingRecipe(exporter, bi.getValue().getRight(), this.BASE, 2);
+            } else if (bi.getKey().equals(Kind.Smooth) && !(bi.getValue().getLeft() instanceof WallBlock) && !(bi.getValue().getLeft() instanceof StairsBlock)) {
+                    CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(this.BASE), bi.getValue().getRight(), 0.1F, 200).criterion("has_stone", conditionsFromItem(this.BASE)).offerTo(exporter);
+            } else {
                 offerStonecuttingRecipe(exporter, bi.getValue().getRight(), this.BASE, 1);
             }
-
-//            if (Kind.Smooth.equals(bi.getKey())) {
-//                CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(blocks.get(Kind.Base).getLeft()), bi.getValue().getRight(), 0.1F, 200).criterion("has_stone", conditionsFromItem(blocks.get(Kind.Base).getLeft())).offerTo(exporter);
-//            } else if (Kind.Polished.equals(bi.getKey())) {
-//                offerStonecuttingRecipe(exporter, bi.getValue().getRight(), blocks.get(Kind.Base).getLeft(), 1);
-//            }
         }
     }
 
