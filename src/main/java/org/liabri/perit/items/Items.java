@@ -9,8 +9,6 @@ import net.minecraft.util.registry.Registry;
 import org.liabri.perit.Perit;
 
 public class Items {
-    public static void init() {}
-
     public static Item register(String path, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Perit.MOD_ID, path), item);
     }

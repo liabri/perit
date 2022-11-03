@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 import static net.minecraft.data.server.RecipeProvider.conditionsFromTag;
 
 public class RecipeProvider {
-    public static void offerPlanksRecipe2(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, TagKey<Item> input) {
+    public static void template(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, TagKey<Item> input) {
         ShapelessRecipeJsonBuilder.create(output, 4).input(input).group("planks").criterion("has_log", conditionsFromTag(input)).offerTo(exporter);
     }
 }

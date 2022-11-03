@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "perit:block/obsidian_bricks",
-    "side": "perit:block/obsidian_bricks",
-    "top": "perit:block/obsidian_bricks"
-  }
-}

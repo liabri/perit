@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "perit:block/quartz_briquettes",
-    "side": "perit:block/quartz_briquettes",
-    "top": "perit:block/quartz_briquettes"
-  }
-}

@@ -2,44 +2,49 @@ package org.liabri.perit.materials;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
+import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Pair;
-import org.liabri.perit.blocks.Blocks;
 import org.liabri.perit.blocks.SlabBlock;
 import org.liabri.perit.blocks.StairsBlock;
 import org.liabri.perit.blocks.WallBlock;
 
+import java.util.function.Consumer;
+
 public class GenericMaterial extends Material {
-    public enum Kinds implements Material.Kinds {
+    public enum Kind implements Material.Kind {
         Stairs,
-        Slabs,
+        Slab,
         Walls,
 
     }
 
     // MOVE "TEXTURE" INTO WALLS
 
-    public GenericMaterial(String name, Block block, ItemGroup itemGroup, boolean whitelist, GenericMaterial.Kinds[] list) {
-        super(name, block, itemGroup, whitelist, list);
+    public GenericMaterial(String name, Block block, ItemGroup itemGroup, GenericMaterial.Kind[] list) {
+        super(name, block, itemGroup, list);
     }
 
-    public GenericMaterial(String name, String textureName, Block block, ItemGroup itemGroup, boolean whitelist, GenericMaterial.Kinds[] list) {
-        super(name, textureName, block, itemGroup, whitelist, list);
+    public GenericMaterial(String name, String textureName, Block block, ItemGroup itemGroup, GenericMaterial.Kind[] list) {
+        super(name, textureName, block, itemGroup, list);
     }
 
     @Override
-    public void register() {
-        if (this.LIST.contains(Kinds.Stairs) == this.WHITELIST) {
-            Blocks.register(this.NAME + "_stairs", new StairsBlock(this.BASE.getDefaultState(), FabricBlockSettings.copy(this.BASE)), ITEM_GROUP);
+    public void init() {
+        if (this.LIST.contains(Kind.Stairs)) {
+            register(Kind.Stairs,this.COMPOSE_NAME + "_stairs", new StairsBlock(this.BASE.getDefaultState(), FabricBlockSettings.copy(this.BASE)), ITEM_GROUP);
         }
 
-        if (this.LIST.contains(Kinds.Slabs) == this.WHITELIST) {
-            Blocks.register(this.NAME + "_slab", new SlabBlock(this.BASE.getDefaultState(), FabricBlockSettings.copy(this.BASE)), ITEM_GROUP);
+        if (this.LIST.contains(Kind.Slab)) {
+            register(Kind.Slab,this.COMPOSE_NAME + "_slab", new SlabBlock(this.BASE.getDefaultState(), FabricBlockSettings.copy(this.BASE)), ITEM_GROUP);
         }
 
-        if (this.LIST.contains(Kinds.Walls) == this.WHITELIST) {
-            Blocks.register(this.NAME + "_wall", new WallBlock(this.BASE.getDefaultState(), this.TEXTURE_NAME, FabricBlockSettings.copy(this.BASE)), ITEM_GROUP);
+        if (this.LIST.contains(Kind.Walls)) {
+            register(Kind.Walls, this.COMPOSE_NAME + "_wall", new WallBlock(this.BASE.getDefaultState(), this.TEXTURE_NAME, FabricBlockSettings.copy(this.BASE)), ITEM_GROUP);
         }
+    }
+
+    @Override
+    public void generate_recipes(Consumer<RecipeJsonProvider> exporter) {
+
     }
 }
