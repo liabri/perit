@@ -23,11 +23,11 @@ public abstract class Material {
     Block BASE;
     final ItemGroup ITEM_GROUP;
 
-    public static HashMap<Kind, Pair<Block, Item>> blocks = new HashMap<>();
+    public HashMap<Kind, Pair<Block, Item>> blocks = new HashMap<>();
 
-    public static Pair<Block, Item> register(Kind kind, String path, Block block, ItemGroup itemGroup) {
+    public Pair<Block, Item> register(Kind kind, String path, Block block, ItemGroup itemGroup) {
         Pair<Block, Item> bi = Blocks.register(path, block, itemGroup);
-        blocks.put(kind, bi);
+        this.blocks.put(kind, bi);
         return bi;
     }
 

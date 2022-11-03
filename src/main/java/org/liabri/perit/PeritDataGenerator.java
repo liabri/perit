@@ -85,7 +85,7 @@
          public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
              System.out.println("SIZE OF THINGY " + Materials.materials.size());
              Materials.materials.forEach(material -> {
-                 Material.blocks.forEach((kind, bi) -> {
+                 material.blocks.forEach((kind, bi) -> {
                      blockStateModelGenerator.registerSimpleCubeAll(bi.getLeft());
                  });
              });
@@ -215,7 +215,7 @@
          @Override
          protected void generateBlockLootTables() {
              Materials.materials.forEach(material -> {
-                 Material.blocks.forEach((kind, blockItemPair) -> {
+                 material.blocks.forEach((kind, blockItemPair) -> {
                      this.addDrop(blockItemPair.getLeft());
                  });
              });
