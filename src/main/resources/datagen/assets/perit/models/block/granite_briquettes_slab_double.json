@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "perit:block/granite_briquettes",
+    "side": "perit:block/granite_briquettes"
+  }
+}

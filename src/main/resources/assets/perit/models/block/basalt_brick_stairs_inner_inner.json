@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "perit:block/basalt_bricks",
+    "side": "perit:block/basalt_bricks",
+    "top": "perit:block/basalt_bricks"
+  }
+}

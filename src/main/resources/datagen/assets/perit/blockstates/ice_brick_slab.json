@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "perit:block/ice_brick_slab"
+    },
+    "type=double": {
+      "model": "perit:block/ice_brick_slab_double"
+    },
+    "type=top": {
+      "model": "perit:block/ice_brick_slab_top"
+    }
+  }
+}

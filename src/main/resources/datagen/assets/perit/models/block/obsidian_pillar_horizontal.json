@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "perit:block/obsidian_pillar_top",
+    "side": "perit:block/obsidian_pillar"
+  }
+}

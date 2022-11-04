@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "perit:block/prismarine_briquettes",
-    "side": "perit:block/prismarine_briquettes",
-    "top": "perit:block/prismarine_briquettes"
-  }
-}

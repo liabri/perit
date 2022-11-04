@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "perit:block/calcite_bricks",
+    "side": "perit:block/calcite_bricks"
+  }
+}

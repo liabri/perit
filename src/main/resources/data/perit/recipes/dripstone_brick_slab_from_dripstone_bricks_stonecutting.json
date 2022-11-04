@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "perit:dripstone_bricks"
+  },
+  "result": "perit:dripstone_brick_slab"
+}

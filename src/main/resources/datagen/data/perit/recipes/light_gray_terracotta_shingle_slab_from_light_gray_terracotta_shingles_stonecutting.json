@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "perit:light_gray_terracotta_shingles"
+  },
+  "result": "perit:light_gray_terracotta_shingle_slab"
+}

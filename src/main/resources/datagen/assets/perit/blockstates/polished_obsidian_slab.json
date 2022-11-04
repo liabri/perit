@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "perit:block/polished_obsidian_slab"
+    },
+    "type=double": {
+      "model": "perit:block/polished_obsidian_slab_double"
+    },
+    "type=top": {
+      "model": "perit:block/polished_obsidian_slab_top"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "perit:block/purpur_setts",
+    "side": "perit:block/purpur_setts"
+  }
+}

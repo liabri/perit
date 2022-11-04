@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "perit:block/soul_sandstone_briquettes",
+    "side": "perit:block/soul_sandstone_briquettes",
+    "top": "perit:block/soul_sandstone_briquettes"
+  }
+}

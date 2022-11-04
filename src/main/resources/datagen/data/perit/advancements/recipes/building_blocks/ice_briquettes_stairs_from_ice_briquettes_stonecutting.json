@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ice_briquettes": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "perit:ice_briquettes"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:ice_briquettes_stairs_from_ice_briquettes_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_ice_briquettes",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:ice_briquettes_stairs_from_ice_briquettes_stonecutting"
+    ]
+  }
+}

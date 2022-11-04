@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:calcite_briquettes"
+  },
+  "result": "perit:calcite_briquettes_stairs"
+}

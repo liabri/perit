@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:polished_obsidian"
+  },
+  "result": "perit:polished_obsidian_wall"
+}
