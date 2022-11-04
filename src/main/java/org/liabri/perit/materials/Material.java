@@ -8,9 +8,7 @@ import net.minecraft.util.Pair;
 import org.liabri.perit.PeritDataGenerator;
 import org.liabri.perit.blocks.Blocks;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.HashMap;
+import java.util.*;
 import java.util.function.Consumer;
 
 public abstract class Material {
@@ -22,11 +20,11 @@ public abstract class Material {
     Block BASE;
     final ItemGroup ITEM_GROUP;
 
-    public HashMap<Kind, Pair<Block, Item>> blocks = new HashMap<>();
+    public ArrayList<Pair<Kind, Pair<Block, Item>>> blocks = new ArrayList<>();
 
     public Pair<Block, Item> register(Kind kind, String path, Block block, ItemGroup itemGroup) {
         Pair<Block, Item> bi = Blocks.register(path, block, itemGroup);
-        this.blocks.put(kind, bi);
+        this.blocks.add(new Pair<>(kind, bi));
         return bi;
     }
 

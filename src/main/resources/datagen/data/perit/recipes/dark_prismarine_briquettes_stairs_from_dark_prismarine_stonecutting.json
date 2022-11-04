@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:dark_prismarine"
+  },
+  "result": "perit:dark_prismarine_briquettes_stairs"
+}

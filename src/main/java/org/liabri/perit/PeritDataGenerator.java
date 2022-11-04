@@ -12,7 +12,9 @@
  import net.minecraft.data.server.recipe.RecipeJsonProvider;
  import net.minecraft.item.Item;
  import net.minecraft.tag.TagKey;
+ import net.minecraft.util.Pair;
  import net.minecraft.util.registry.Registry;
+ import org.liabri.perit.materials.Material;
  import org.liabri.perit.materials.Materials;
 
  import java.util.Collection;
@@ -67,8 +69,8 @@
          public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
              System.out.println("SIZE OF THINGY " + Materials.materials.size());
              Materials.materials.forEach(material -> {
-                 material.blocks.forEach((kind, bi) -> {
-                     blockStateModelGenerator.registerSimpleCubeAll(bi.getLeft());
+                 material.blocks.forEach(bi -> {
+                     blockStateModelGenerator.registerSimpleCubeAll(bi.getRight().getLeft());
                  });
              });
          //            Blocks.blocks.forEach((block) ->  {
