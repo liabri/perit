@@ -58,43 +58,34 @@ public class StoneMaterial extends Material {
     @Override
     public void generate_recipes(Consumer<RecipeJsonProvider> exporter) {
         for(Pair<Material.Kind, Pair<Block, Item>> bi : blocks) {
-            System.out.println("CLASS of '" +bi.getRight().getLeft().getName() + "' : " + bi.getRight().getLeft().getClass());
+            Block block = bi.getRight().getLeft();
 
-            if (bi.getRight().getLeft() instanceof SlabBlock slabBlock) {
-                System.out.println("THIS IS A SLAB!");
-                offerStonecuttingRecipe(exporter, slabBlock, this.BASE, 2);
-            } else if (bi.getLeft().equals(Kind.Smooth) && !(bi.getRight().getLeft() instanceof WallBlock) && !(bi.getRight().getLeft() instanceof StairsBlock)) {
-                System.out.println("SMOOTH BLOCK");
-                offerSmelting(exporter, List.of(new ItemConvertible[]{this.BASE}), bi.getRight().getRight(), 0.1F, 200, bi.getRight().getLeft().getTranslationKey());
+            if (block instanceof SlabBlock slabBlock) {
+                offerStonecuttingRecipe(exporter, slabBlock, slabBlock.getBaseBlockState().getBlock(), 2);
+            } else if (block instanceof WallBlock wallBlock) {
+                offerStonecuttingRecipe(exporter, wallBlock, wallBlock.getBaseBlockState().getBlock(), 1);
+            } else if (block instanceof StairsBlock stairsBlock) {
+                offerStonecuttingRecipe(exporter, stairsBlock, stairsBlock.getBaseBlockState().getBlock(), 1);
+            } else if (bi.getLeft().equals(Kind.Smooth)) {
+                offerSmelting(exporter, List.of(new ItemConvertible[]{this.BASE}), bi.getRight().getRight(), 0.1F, 200, block.getTranslationKey());
             } else {
-                System.out.println("REST");
                 offerStonecuttingRecipe(exporter, bi.getRight().getRight(), this.BASE, 1);
             }
         }
-
-//        for(Map.Entry<Material.Kind, Pair<Block, Item>> bi : blocks.entrySet()) {
-//            System.out.println("CLASS of '" +bi.getValue().getLeft().getName() + "' : " + bi.getValue().getLeft().getClass());
-//
-//            if (bi.getValue().getLeft() instanceof SlabBlock slabBlock) {
-//                System.out.println("THIS IS A SLAB!");
-//                offerStonecuttingRecipe(exporter, slabBlock, this.BASE, 2);
-//            } else if (bi.getKey().equals(Kind.Smooth) && !(bi.getValue().getLeft() instanceof WallBlock) && !(bi.getValue().getLeft() instanceof StairsBlock)) {
-//                System.out.println("SMOOTH BLOCK");
-//                offerSmelting(exporter, List.of(new ItemConvertible[]{this.BASE}), bi.getValue().getRight(), 0.1F, 200, bi.getValue().getLeft().getTranslationKey());
-//            } else {
-//                System.out.println("REST");
-//                offerStonecuttingRecipe(exporter, bi.getValue().getRight(), this.BASE, 1);
-//            }
-//        }
     }
 
     @Override
     public void generateTags(PeritDataGenerator.PeritBlockTagProvider peritBlockTagProvider) {
         for(Pair<Material.Kind, Pair<Block, Item>> bi : blocks) {
-            if (bi.getRight().getLeft() instanceof SlabBlock) {
-                System.out.println("BOOgegrO");
-                peritBlockTagProvider.getOrCreateTagBuilder(BlockTags.SLABS).add(bi.getRight().getLeft());
+            Block block = bi.getRight().getLeft();
+            if (block instanceof SlabBlock slabBlock) {
+                peritBlockTagProvider.getOrCreateTagBuilder(BlockTags.SLABS).add(slabBlock);
+            } else if (block instanceof WallBlock wallBlock) {
+                peritBlockTagProvider.getOrCreateTagBuilder(BlockTags.WALLS).add(wallBlock);
+            } else if (block instanceof StairsBlock stairsBlock) {
+                peritBlockTagProvider.getOrCreateTagBuilder(BlockTags.STAIRS).add(stairsBlock);
             }
+
         }
     }
 

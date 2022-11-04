@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:red_sandstone_briquettes"
+  },
+  "result": "perit:red_sandstone_briquettes_wall"
+}
