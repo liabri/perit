@@ -11,18 +11,6 @@ public class Materials {
     public static ArrayList<Material> materials = new ArrayList<>();
     public static void init() {}
 
-
-
-//    public static void generate_recipes(Consumer<RecipeJsonProvider> exporter) {
-//        Materials.materials.forEach((material -> {
-//            if(material instanceof StoneMaterial) {
-//                ((StoneMaterial) material).generate_recipes(exporter);
-//            } else if(material instanceof WoodMaterial) {
-//                ((WoodMaterial) material).generate_recipes(exporter);
-//            }
-//        }));
-//    }
-
     public static final String[] COLOURS = {
             "black",
             "blue",
@@ -62,10 +50,29 @@ public class Materials {
             Blocks.YELLOW_CONCRETE
     };
 
+    public static final Block[] TERRACOTTAS = {
+            Blocks.BLACK_TERRACOTTA,
+            Blocks.BROWN_TERRACOTTA,
+            Blocks.BLUE_TERRACOTTA,
+            Blocks.CYAN_TERRACOTTA,
+            Blocks.GREEN_TERRACOTTA,
+            Blocks.GRAY_TERRACOTTA,
+            Blocks.LIGHT_BLUE_TERRACOTTA,
+            Blocks.LIGHT_GRAY_TERRACOTTA,
+            Blocks.LIME_TERRACOTTA,
+            Blocks.MAGENTA_TERRACOTTA,
+            Blocks.ORANGE_TERRACOTTA,
+            Blocks.PINK_TERRACOTTA,
+            Blocks.PURPLE_TERRACOTTA,
+            Blocks.RED_TERRACOTTA,
+            Blocks.WHITE_TERRACOTTA,
+            Blocks.YELLOW_TERRACOTTA
+    };
+
     static {
         // Terracotta
-        for (String colour: COLOURS) {
-            materials.add(new StoneMaterial(colour + "_terracotta", Blocks.TERRACOTTA, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+        for(int i=0; i< TERRACOTTAS.length; i++) {
+            materials.add(new StoneMaterial(COLOURS[i] + "_concrete", TERRACOTTAS[i], ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
                     StoneMaterial.Kind.Bricks,
                     StoneMaterial.Kind.HerringboneBricks,
                     StoneMaterial.Kind.Shingles,
