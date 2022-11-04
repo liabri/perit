@@ -181,7 +181,7 @@ public class Materials {
         }));
 
         // Blue nether bricks
-        materials.add(new StoneMaterial("nether_bricks", Blocks.NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+        materials.add(new StoneMaterial("blue_nether_bricks", Blocks.NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
                 StoneMaterial.Kind.Base,
         }));
 

@@ -11,6 +11,7 @@ import org.liabri.perit.blocks.WallBlock;
 
 import java.util.function.Consumer;
 
+// refactor to BlockType ?
 public class GenericMaterial extends Material {
     public enum Kind implements Material.Kind {
         Stairs,

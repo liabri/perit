@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "block.perit.smooth_soul_sandstone",
+  "ingredient": {
+    "item": "perit:soul_sandstone"
+  },
+  "result": "perit:smooth_soul_sandstone"
+}
