@@ -6,10 +6,12 @@ import net.minecraft.block.PillarBlock;
 import net.minecraft.data.server.recipe.CookingRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.tag.BlockTags;
+import net.minecraft.tag.TagKey;
 import net.minecraft.util.Pair;
+import org.liabri.perit.PeritDataGenerator;
 import org.liabri.perit.blocks.*;
 
 import java.util.Map;
@@ -61,6 +63,20 @@ public class StoneMaterial extends Material {
                 offerStonecuttingRecipe(exporter, bi.getValue().getRight(), this.BASE, 1);
             }
         }
+    }
+
+    @Override
+    public void generateTags(PeritDataGenerator.PeritBlockTagProvider peritBlockTagProvider) {
+        for(Map.Entry<Material.Kind, Pair<Block, Item>> bi : blocks.entrySet()) {
+            if (bi.getValue().getLeft() instanceof SlabBlock) {
+                peritBlockTagProvider.getOrCreateTagBuilder(BlockTags.SLABS).add(bi.getValue().getLeft());
+            }
+        }
+    }
+
+    @Override
+    public void generateTags(PeritDataGenerator.PeritItemTagProvider peritBlockTagProvider) {
+
     }
 
     @Override

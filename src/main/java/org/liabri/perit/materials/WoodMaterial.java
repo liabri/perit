@@ -7,6 +7,7 @@ import net.minecraft.entity.vehicle.BoatEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Pair;
+import org.liabri.perit.PeritDataGenerator;
 import org.liabri.perit.blocks.DoorBlock;
 import org.liabri.perit.blocks.FenceBlock;
 import org.liabri.perit.blocks.FenceGateBlock;
@@ -98,6 +99,16 @@ public class WoodMaterial extends Material {
     }
 
     public void generate_recipes(Consumer<RecipeJsonProvider> exporter) {
+
+    }
+
+    @Override
+    public void generateTags(PeritDataGenerator.PeritBlockTagProvider peritBlockTagProvider) {
+
+    }
+
+    @Override
+    public void generateTags(PeritDataGenerator.PeritItemTagProvider peritBlockTagProvider) {
 
     }
 }

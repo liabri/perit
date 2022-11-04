@@ -2,39 +2,20 @@
 
  import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
  import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
- import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
  import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
  import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
  import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
  import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
  import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
- import net.minecraft.block.*;
- import net.minecraft.block.DoorBlock;
- import net.minecraft.block.FenceBlock;
- import net.minecraft.block.FenceGateBlock;
- import net.minecraft.block.TrapdoorBlock;
+ import net.minecraft.block.Block;
  import net.minecraft.data.client.*;
- import net.minecraft.data.server.recipe.CookingRecipeJsonBuilder;
  import net.minecraft.data.server.recipe.RecipeJsonProvider;
- import net.minecraft.item.ItemConvertible;
- import net.minecraft.item.Items;
- import net.minecraft.recipe.Ingredient;
- import net.minecraft.tag.BlockTags;
- import net.minecraft.util.Identifier;
- import net.minecraft.util.registry.BuiltinRegistries;
+ import net.minecraft.item.Item;
+ import net.minecraft.tag.TagKey;
  import net.minecraft.util.registry.Registry;
- import org.liabri.perit.blocks.*;
- import org.liabri.perit.blocks.Blocks;
- import org.liabri.perit.blocks.LadderBlock;
- import org.liabri.perit.blocks.SlabBlock;
- import org.liabri.perit.blocks.StairsBlock;
- import org.liabri.perit.blocks.WallBlock;
- import org.liabri.perit.blocks.WoodenButtonBlock;
- import org.liabri.perit.materials.Material;
  import org.liabri.perit.materials.Materials;
- import org.liabri.perit.materials.StoneMaterial;
- import org.liabri.perit.materials.WoodMaterial;
 
+ import java.util.Collection;
  import java.util.function.Consumer;
 
  public class PeritDataGenerator implements DataGeneratorEntrypoint {
@@ -43,11 +24,12 @@
 
      @Override
      public void onInitializeDataGenerator(FabricDataGenerator dataGenerator) {
-//         PeritBlockTagProvider blockTagProvider = dataGenerator.addProvider(PeritBlockTagProvider::new);
-//         dataGenerator.addProvider(new PeritBlockTagProvider.PeritItemTagProvider(dataGenerator, blockTagProvider));
          dataGenerator.addProvider(PeritRecipeProvider::new);
 //         dataGenerator.addProvider(PeritModelProvider::new);
 //         dataGenerator.addProvider(PeritBlockLootTableProvider::new);
+
+         PeritBlockTagProvider blockTagProvider = dataGenerator.addProvider(PeritBlockTagProvider::new);
+         dataGenerator.addProvider(new PeritItemTagProvider(dataGenerator, blockTagProvider));
 
 
 //        try {
@@ -156,13 +138,19 @@
      }
 
      //     block tags
-     private static class PeritBlockTagProvider extends FabricTagProvider.BlockTagProvider {
-         private PeritBlockTagProvider(FabricDataGenerator dataGenerator) {
-             super(dataGenerator);
-         }
-
-         @Override
-         protected void generateTags() {
+//     public static class PeritTagGenerator extends FabricTagProvider<Item> {
+//         private PeritTagGenerator(FabricDataGenerator dataGenerator) {
+//             super(dataGenerator, Registry.ITEM);
+//         }
+//
+//         public FabricTagBuilder<Item> getOrCreateTagBuilder(TagKey<Item> tag) {
+//             return super.getOrCreateTagBuilder(tag);
+//         }
+//         @Override
+//         protected void generateTags() {
+//             Materials.materials.forEach((material -> {
+//                 material.generateTags(this);
+//             }));
 //            Blocks.blocks.forEach((block) -> {
 //                if (block instanceof WallBlock wallBlock) {
 //                    getOrCreateTagBuilder(BlockTags.WALLS).add(wallBlock);
@@ -191,34 +179,66 @@
 //                }
 //            });
 //        }
+//         }
+//
+//         // item tags
+//         private static class PeritBlockTagProvider extends FabricTagProvider<Block> {
+//             private PeritBlockTagProvider(FabricDataGenerator dataGenerator, BlockTagProvider blockTagProvider) {
+//                 super(dataGenerator, blockTagProvider);
+//             }
+//
+//             @Override
+//             protected void generateTags() {
+////                copy(BlockTags.ANVIL, ItemTags.ANVIL);
+//             }
+//         }
+//     }
+
+     public static class PeritBlockTagProvider extends FabricTagProvider.BlockTagProvider {
+         private PeritBlockTagProvider(FabricDataGenerator dataGenerator) {
+             super(dataGenerator);
+         }
+         public FabricTagBuilder<Block> getOrCreateTagBuilder(TagKey<Block> tag) {
+             return super.getOrCreateTagBuilder(tag);
+         }
+         @Override
+         protected void generateTags() {
+             Materials.materials.forEach((material -> {
+                 material.generateTags(this);
+             }));
+         }
+     }
+
+     public static class PeritItemTagProvider extends FabricTagProvider.ItemTagProvider {
+         private PeritItemTagProvider(FabricDataGenerator dataGenerator, BlockTagProvider blockTagProvider) {
+             super(dataGenerator, blockTagProvider);
          }
 
-         // item tags
-         private static class PeritItemTagProvider extends FabricTagProvider.ItemTagProvider {
-             private PeritItemTagProvider(FabricDataGenerator dataGenerator, BlockTagProvider blockTagProvider) {
-                 super(dataGenerator, blockTagProvider);
-             }
+         public FabricTagBuilder<Item> getOrCreateTagBuilder(TagKey<Item> tag) {
+             return super.getOrCreateTagBuilder(tag);
+         }
 
-             @Override
-             protected void generateTags() {
-//            copy(BlockTags.ANVIL, ItemTags.ANVIL);
-             }
+         @Override
+         protected void generateTags() {
+             Materials.materials.forEach((material -> {
+                 material.generateTags(this);
+             }));
          }
      }
 
      // loot tables
-     private static class PeritBlockLootTableProvider extends FabricBlockLootTableProvider {
-         private PeritBlockLootTableProvider(FabricDataGenerator dataGenerator) {
-             super(dataGenerator);
-         }
-
-         @Override
-         protected void generateBlockLootTables() {
-             Materials.materials.forEach(material -> {
-                 material.blocks.forEach((kind, blockItemPair) -> {
-                     this.addDrop(blockItemPair.getLeft());
-                 });
-             });
-         }
-     }
+//     private static class PeritBlockLootTableProvider extends FabricBlockLootTableProvider {
+//         private PeritBlockLootTableProvider(FabricDataGenerator dataGenerator) {
+//             super(dataGenerator);
+//         }
+//
+//         @Override
+//         protected void generateBlockLootTables() {
+//             Materials.materials.forEach(material -> {
+//                 material.blocks.forEach((kind, blockItemPair) -> {
+//                     addDrop(blockItemPair.getLeft());
+//                 });
+//             });
+//         }
+//     }
  }
