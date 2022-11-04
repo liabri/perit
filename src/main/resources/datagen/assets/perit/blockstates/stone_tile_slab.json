@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "perit:block/stone_tile_slab"
+    },
+    "type=double": {
+      "model": "perit:block/stone_tile_slab_double"
+    },
+    "type=top": {
+      "model": "perit:block/stone_tile_slab_top"
+    }
+  }
+}

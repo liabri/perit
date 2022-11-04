@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "perit:block/tuff_briquettes",
+    "side": "perit:block/tuff_briquettes",
+    "top": "perit:block/tuff_briquettes"
+  }
+}

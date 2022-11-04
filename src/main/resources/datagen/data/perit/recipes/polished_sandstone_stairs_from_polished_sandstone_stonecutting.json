@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:polished_sandstone"
+  },
+  "result": "perit:polished_sandstone_stairs"
+}

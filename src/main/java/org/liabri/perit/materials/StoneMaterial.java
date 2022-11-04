@@ -290,7 +290,7 @@ public class StoneMaterial extends Material {
         }
 
         if (this.LIST.contains(Kind.Chiseled)) {
-            register(Kind.CrackedBriquettes ,"chiseled" + this.BASE_NAME, new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
+            register(Kind.CrackedBriquettes ,"chiseled_" + this.BASE_NAME, new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
 //            private final Pair<Block, Item> CHISELED_RUNES;
 //            private final Pair<Block, Item> CHISELED_GEOMETRIC;
 //            private final Pair<Block, Item> CHISELED_DANCE;

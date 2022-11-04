@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:diorite_tiles"
+  },
+  "result": "perit:diorite_tile_wall"
+}

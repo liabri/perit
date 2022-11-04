@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:purpur_setts"
+  },
+  "result": "perit:purpur_sett_wall"
+}
