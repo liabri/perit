@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.item.ItemGroup;
+import org.liabri.perit.PeritDataGenerator;
 import org.liabri.perit.blocks.SlabBlock;
 import org.liabri.perit.blocks.StairsBlock;
 import org.liabri.perit.blocks.WallBlock;
@@ -45,6 +46,16 @@ public class GenericMaterial extends Material {
 
     @Override
     public void generate_recipes(Consumer<RecipeJsonProvider> exporter) {
+
+    }
+
+    @Override
+    public void generateTags(PeritDataGenerator.PeritBlockTagProvider peritBlockTagProvider) {
+
+    }
+
+    @Override
+    public void generateTags(PeritDataGenerator.PeritItemTagProvider peritBlockTagProvider) {
 
     }
 }

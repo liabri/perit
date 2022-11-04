@@ -5,10 +5,9 @@ import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Pair;
+import org.liabri.perit.PeritDataGenerator;
 import org.liabri.perit.blocks.Blocks;
-import org.liabri.perit.items.Items;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.HashMap;
@@ -33,6 +32,9 @@ public abstract class Material {
 
     public abstract void init();
     public abstract void generate_recipes(Consumer<RecipeJsonProvider> exporter);
+    public abstract void generateTags(PeritDataGenerator.PeritBlockTagProvider peritBlockTagProvider);
+    public abstract void generateTags(PeritDataGenerator.PeritItemTagProvider peritBlockTagProvider);
+
     public interface Kind {}
 
 
