@@ -139,7 +139,6 @@ public class Materials {
                 StoneMaterial.Kind.Smooth,
                 StoneMaterial.Kind.Polished,
                 StoneMaterial.Kind.Bricks,
-                StoneMaterial.Kind.Briquettes,
                 StoneMaterial.Kind.Chiseled,
                 StoneMaterial.Kind.Pillar,
                 StoneMaterial.Kind.Tiles
@@ -208,7 +207,9 @@ public class Materials {
         // Blue nether bricks
         materials.add(new StoneMaterial("blue_nether_bricks", "blue_nether_brick", Blocks.NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
                 StoneMaterial.Kind.Base,
-                StoneMaterial.Kind.CrackedBase
+                StoneMaterial.Kind.CrackedBase,
+                StoneMaterial.Kind.Pillar,
+                StoneMaterial.Kind.Chiseled,
                 // cracked base
         }));
 
@@ -232,8 +233,14 @@ public class Materials {
         }));
 
         // Wither Bone
-        materials.add(new StoneMaterial("withered_bone", Blocks.BONE_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[] {
-                StoneMaterial.Kind.Base,
+        GenericMaterial witheredBoneBlock = new GenericMaterial("withered_bone_block", Blocks.BONE_BLOCK, ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
+                GenericMaterial.Kind.Pillar,
+                GenericMaterial.Kind.Stairs,
+                GenericMaterial.Kind.Slab,
+                GenericMaterial.Kind.Walls
+        });
+        materials.add(witheredBoneBlock);
+        materials.add(new StoneMaterial("withered_bone", witheredBoneBlock.BASE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[] {
                 StoneMaterial.Kind.Smooth,
                 StoneMaterial.Kind.Polished,
                 StoneMaterial.Kind.Bricks,
@@ -263,16 +270,16 @@ public class Materials {
         }));
 
         // Soul Sandstone
-        materials.add(new StoneMaterial("soul_sandstone", Blocks.SANDSTONE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
-                StoneMaterial.Kind.Base,
-                StoneMaterial.Kind.Smooth,
-                StoneMaterial.Kind.Polished,
-                StoneMaterial.Kind.Bricks,
-                StoneMaterial.Kind.Briquettes,
-                StoneMaterial.Kind.Cut,
-                StoneMaterial.Kind.Chiseled,
-                StoneMaterial.Kind.Pillar,
-        }));
+//        materials.add(new StoneMaterial("soul_sandstone", Blocks.SANDSTONE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+//                StoneMaterial.Kind.Base,
+//                StoneMaterial.Kind.Smooth,
+//                StoneMaterial.Kind.Polished,
+//                StoneMaterial.Kind.Bricks,
+//                StoneMaterial.Kind.Briquettes,
+//                StoneMaterial.Kind.Cut,
+//                StoneMaterial.Kind.Chiseled,
+//                StoneMaterial.Kind.Pillar,
+//        }));
 
         // Sandstone
         materials.add(new StoneMaterial("sandstone", Blocks.SANDSTONE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
@@ -293,7 +300,7 @@ public class Materials {
         }));
 
         // Quartz
-        materials.add(new GenericMaterial("quartz", "side", Blocks.QUARTZ_BLOCK, ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
+        materials.add(new GenericMaterial("quartz", Blocks.SMOOTH_QUARTZ, ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
                 GenericMaterial.Kind.Walls
         }));
 
@@ -358,9 +365,7 @@ public class Materials {
         materials.add(new StoneMaterial( "dark_prismarine", Blocks.DARK_PRISMARINE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
                 StoneMaterial.Kind.Smooth,
                 StoneMaterial.Kind.Polished,
-                StoneMaterial.Kind.Cut,
                 StoneMaterial.Kind.Chiseled,
-                StoneMaterial.Kind.Briquettes,
                 StoneMaterial.Kind.Pillar,
                 StoneMaterial.Kind.Tiles
         }));

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "perit:stone_setts"
+  },
+  "result": "perit:stone_sett_slab"
+}

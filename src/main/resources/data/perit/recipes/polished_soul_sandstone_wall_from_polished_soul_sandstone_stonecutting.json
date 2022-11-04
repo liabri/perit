@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:polished_soul_sandstone"
-  },
-  "result": "perit:polished_soul_sandstone_wall"
-}

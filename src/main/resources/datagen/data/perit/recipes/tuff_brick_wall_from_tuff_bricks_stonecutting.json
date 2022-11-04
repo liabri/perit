@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:tuff_bricks"
+  },
+  "result": "perit:tuff_brick_wall"
+}

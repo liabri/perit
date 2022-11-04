@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "perit:block/nether_brick_pillar_top",
+    "side": "perit:block/nether_brick_pillar"
+  }
+}

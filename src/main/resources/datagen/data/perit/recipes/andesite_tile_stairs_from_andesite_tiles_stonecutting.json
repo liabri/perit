@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:andesite_tiles"
+  },
+  "result": "perit:andesite_tile_stairs"
+}
