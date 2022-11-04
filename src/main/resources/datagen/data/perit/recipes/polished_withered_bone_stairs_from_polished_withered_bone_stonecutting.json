@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:polished_withered_bone"
+  },
+  "result": "perit:polished_withered_bone_stairs"
+}

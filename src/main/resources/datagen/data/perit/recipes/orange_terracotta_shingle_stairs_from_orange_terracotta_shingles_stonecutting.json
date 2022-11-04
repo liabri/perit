@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:orange_terracotta_shingles"
+  },
+  "result": "perit:orange_terracotta_shingle_stairs"
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:withered_bone_sett_stairs_from_withered_bone_setts_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_withered_bone_setts": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "perit:withered_bone_setts"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_withered_bone_setts",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:withered_bone_sett_stairs_from_withered_bone_setts_stonecutting"
+    ]
+  }
+}

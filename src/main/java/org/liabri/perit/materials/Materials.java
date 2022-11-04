@@ -171,7 +171,7 @@ public class Materials {
         }));
 
         // Stone
-        materials.add(new StoneMaterial( "quartz", Blocks.QUARTZ_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+        materials.add(new StoneMaterial( "stone", Blocks.QUARTZ_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
                 StoneMaterial.Kind.Polished,
                 StoneMaterial.Kind.Briquettes,
                 StoneMaterial.Kind.Pillar,
@@ -180,7 +180,7 @@ public class Materials {
         }));
 
         // Blackstone
-        materials.add(new StoneMaterial( "quartz", Blocks.QUARTZ_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+        materials.add(new StoneMaterial( "blackstone", Blocks.QUARTZ_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
                 StoneMaterial.Kind.Smooth,
                 StoneMaterial.Kind.Chiseled,
                 StoneMaterial.Kind.Bricks,

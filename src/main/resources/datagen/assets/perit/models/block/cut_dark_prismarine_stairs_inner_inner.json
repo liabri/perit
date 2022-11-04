@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "perit:block/cut_dark_prismarine",
+    "side": "perit:block/cut_dark_prismarine",
+    "top": "perit:block/cut_dark_prismarine"
+  }
+}

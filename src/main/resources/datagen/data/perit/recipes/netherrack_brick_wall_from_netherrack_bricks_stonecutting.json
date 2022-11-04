@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:netherrack_bricks"
+  },
+  "result": "perit:netherrack_brick_wall"
+}

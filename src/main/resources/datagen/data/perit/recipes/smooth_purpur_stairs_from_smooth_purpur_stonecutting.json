@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:smooth_purpur"
+  },
+  "result": "perit:smooth_purpur_stairs"
+}

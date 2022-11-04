@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "perit:withered_bone"
+  },
+  "result": "perit:withered_bone_slab"
+}
