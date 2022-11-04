@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "minecraft:terracotta"
-  },
-  "result": "perit:polished_gray_terracotta_wall"
-}

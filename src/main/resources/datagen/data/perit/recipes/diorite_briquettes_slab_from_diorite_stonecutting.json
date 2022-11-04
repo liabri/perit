@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "minecraft:diorite"
-  },
-  "result": "perit:diorite_briquettes_slab"
-}

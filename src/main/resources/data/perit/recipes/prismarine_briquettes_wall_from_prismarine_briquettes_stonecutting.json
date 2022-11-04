@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:prismarine_briquettes"
+  },
+  "result": "perit:prismarine_briquettes_wall"
+}

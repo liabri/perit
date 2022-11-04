@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:packed_light_gray_concrete"
+  },
+  "result": "perit:packed_light_gray_concrete_stairs"
+}

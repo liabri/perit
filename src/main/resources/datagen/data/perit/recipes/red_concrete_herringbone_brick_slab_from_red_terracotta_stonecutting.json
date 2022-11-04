@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "minecraft:red_terracotta"
-  },
-  "result": "perit:red_concrete_herringbone_brick_slab"
-}
