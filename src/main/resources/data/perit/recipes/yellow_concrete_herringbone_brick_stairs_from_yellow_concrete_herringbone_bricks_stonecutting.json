@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:yellow_concrete_herringbone_bricks"
-  },
-  "result": "perit:yellow_concrete_herringbone_brick_stairs"
-}

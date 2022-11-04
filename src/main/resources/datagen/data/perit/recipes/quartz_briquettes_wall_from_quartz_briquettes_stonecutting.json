@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:quartz_briquettes"
-  },
-  "result": "perit:quartz_briquettes_wall"
-}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:pink_terracotta_shingles"
+  },
+  "result": "perit:pink_terracotta_shingle_wall"
+}

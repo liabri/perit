@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "perit:block/packedpurple_terracotta",
-    "side": "perit:block/packedpurple_terracotta",
-    "top": "perit:block/packedpurple_terracotta"
-  }
-}

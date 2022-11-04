@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "perit:polished_light_blue_concrete"
-  },
-  "result": "perit:polished_light_blue_concrete_slab"
-}

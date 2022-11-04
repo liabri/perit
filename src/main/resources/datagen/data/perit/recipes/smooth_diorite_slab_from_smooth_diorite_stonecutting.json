@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "perit:smooth_diorite"
-  },
-  "result": "perit:smooth_diorite_slab"
-}

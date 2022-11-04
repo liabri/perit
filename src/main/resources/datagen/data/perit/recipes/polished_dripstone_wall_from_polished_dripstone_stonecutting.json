@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:polished_dripstone"
-  },
-  "result": "perit:polished_dripstone_wall"
-}

@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "perit:block/prismarine_pillar"
+    "end": "perit:block/prismarine_pillar_top",
+    "side": "perit:block/prismarine_pillar"
   }
 }

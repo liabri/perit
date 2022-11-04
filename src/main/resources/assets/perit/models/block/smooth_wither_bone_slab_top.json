@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "perit:block/smooth_wither_bone",
-    "side": "perit:block/smooth_wither_bone",
-    "top": "perit:block/smooth_wither_bone"
-  }
-}

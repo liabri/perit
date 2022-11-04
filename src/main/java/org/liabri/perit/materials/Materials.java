@@ -72,7 +72,7 @@ public class Materials {
     static {
         // Terracotta
         for(int i=0; i< TERRACOTTAS.length; i++) {
-            materials.add(new StoneMaterial(COLOURS[i] + "_concrete", TERRACOTTAS[i], ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+            materials.add(new StoneMaterial(COLOURS[i] + "_terracotta", TERRACOTTAS[i], ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
                     StoneMaterial.Kind.Bricks,
                     StoneMaterial.Kind.HerringboneBricks,
                     StoneMaterial.Kind.Shingles,
