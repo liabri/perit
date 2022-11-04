@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:andesite_setts"
-  },
-  "result": "perit:andesite_sett_wall"
-}

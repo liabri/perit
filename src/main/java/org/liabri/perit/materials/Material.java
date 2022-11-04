@@ -15,10 +15,10 @@ public abstract class Material {
     final String BASE_NAME;
     final String COMPOSE_NAME;
     final String TEXTURE_NAME;
-
     final List<Kind> LIST;
     Block BASE;
     final ItemGroup ITEM_GROUP;
+    final Pair<Block, Item>[] HARDCODED_BLOCKS;
 
     public ArrayList<Pair<Kind, Pair<Block, Item>>> blocks = new ArrayList<>();
 
@@ -33,8 +33,9 @@ public abstract class Material {
     public abstract void generateTags(PeritDataGenerator.PeritBlockTagProvider peritBlockTagProvider);
     public abstract void generateTags(PeritDataGenerator.PeritItemTagProvider peritBlockTagProvider);
 
-    public interface Kind {}
+    public interface Kind {
 
+    }
 
     public Material(String base_name, Block block, ItemGroup ITEM_GROUP, Kind[] list) {
         this.BASE_NAME = base_name;
@@ -43,6 +44,19 @@ public abstract class Material {
         this.LIST = Arrays.asList(list);
         this.BASE = block;
         this.ITEM_GROUP = ITEM_GROUP;
+        this.HARDCODED_BLOCKS = null;
+
+        init();
+    }
+
+    public Material(String base_name, Block block, ItemGroup ITEM_GROUP, Kind[] list, Pair<Block, Item>[] blocks) {
+        this.BASE_NAME = base_name;
+        this.COMPOSE_NAME = base_name;
+        this.TEXTURE_NAME = null;
+        this.LIST = Arrays.asList(list);
+        this.BASE = block;
+        this.ITEM_GROUP = ITEM_GROUP;
+        this.HARDCODED_BLOCKS = blocks;
 
         init();
     }
@@ -54,19 +68,20 @@ public abstract class Material {
         this.LIST = Arrays.asList(list);
         this.BASE = block;
         this.ITEM_GROUP = ITEM_GROUP;
+        this.HARDCODED_BLOCKS = null;
 
         init();
     }
 
-    public Material(String name, Block block, ItemGroup ITEM_GROUP, String textureName, Kind[] list) {
-        this.BASE_NAME = name;
-        this.COMPOSE_NAME = name;
-        this.TEXTURE_NAME = textureName;
-        this.LIST = Arrays.asList(list);
-        this.BASE = block;
-        this.ITEM_GROUP = ITEM_GROUP;
-
-        init();
-    }
-
+//    public Material(String name, Block block, ItemGroup ITEM_GROUP, String textureName, Kind[] list) {
+//        this.BASE_NAME = name;
+//        this.COMPOSE_NAME = name;
+//        this.TEXTURE_NAME = textureName;
+//        this.LIST = Arrays.asList(list);
+//        this.BASE = block;
+//        this.ITEM_GROUP = ITEM_GROUP;
+//        this.HARDCODED_BLOCKS = null;
+//
+//        init();
+//    }
 }

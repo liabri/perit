@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "perit:block/packed_brown_terracotta",
-    "side": "perit:block/packed_brown_terracotta",
-    "top": "perit:block/packed_brown_terracotta"
-  }
-}

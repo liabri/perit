@@ -2,6 +2,7 @@ package org.liabri.perit.materials;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.item.ItemGroup;
 import org.liabri.perit.PeritDataGenerator;
@@ -17,7 +18,8 @@ public class GenericMaterial extends Material {
         Stairs,
         Slab,
         Walls,
-
+        Cube,
+        Pillar,
     }
 
     // MOVE "TEXTURE" INTO WALLS
@@ -42,6 +44,14 @@ public class GenericMaterial extends Material {
 
         if (this.LIST.contains(Kind.Walls)) {
             register(Kind.Walls, this.COMPOSE_NAME + "_wall", new WallBlock(this.BASE.getDefaultState(), this.TEXTURE_NAME, FabricBlockSettings.copy(this.BASE)), ITEM_GROUP);
+        }
+
+        if (this.LIST.contains(Kind.Cube)) {
+            register(Kind.Cube, this.BASE_NAME, new Block(FabricBlockSettings.copy(this.BASE)), ITEM_GROUP);
+        }
+
+        if (this.LIST.contains(Kind.Pillar)) {
+            register(Kind.Pillar, this.BASE_NAME, new PillarBlock(FabricBlockSettings.copy(this.BASE)), ITEM_GROUP);
         }
     }
 

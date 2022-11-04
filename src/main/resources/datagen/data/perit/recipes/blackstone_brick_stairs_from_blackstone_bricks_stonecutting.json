@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:blackstone_bricks"
-  },
-  "result": "perit:blackstone_brick_stairs"
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "perit:block/basalt_setts",
-    "side": "perit:block/basalt_setts",
-    "top": "perit:block/basalt_setts"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:granite_briquettes"
-  },
-  "result": "perit:granite_briquettes_stairs"
-}

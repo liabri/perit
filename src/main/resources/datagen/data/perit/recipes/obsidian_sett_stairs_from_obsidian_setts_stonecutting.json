@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:obsidian_setts"
-  },
-  "result": "perit:obsidian_sett_stairs"
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "perit:block/smooth_deepslate",
-    "side": "perit:block/smooth_deepslate",
-    "top": "perit:block/smooth_deepslate"
-  }
-}

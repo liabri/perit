@@ -69,6 +69,9 @@ public class Materials {
             Blocks.YELLOW_TERRACOTTA
     };
 
+    //WARPED NETHER BRICK RECIPE
+    // BAMBOO
+
     static {
         // Terracotta
         for(int i=0; i< TERRACOTTAS.length; i++) {
@@ -202,13 +205,11 @@ public class Materials {
                 StoneMaterial.Kind.Pillar,
         }));
 
-        materials.add(new StoneMaterial("nether_bricks", Blocks.NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
-                StoneMaterial.Kind.Chiseled,
-        }));
-
         // Blue nether bricks
-        materials.add(new StoneMaterial("blue_nether_bricks", Blocks.NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+        materials.add(new StoneMaterial("blue_nether_bricks", "blue_nether_brick", Blocks.NETHER_BRICKS, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
                 StoneMaterial.Kind.Base,
+                StoneMaterial.Kind.CrackedBase
+                // cracked base
         }));
 
         // Red nether bricks

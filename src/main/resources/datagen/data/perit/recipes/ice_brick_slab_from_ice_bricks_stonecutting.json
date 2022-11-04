@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "perit:ice_bricks"
-  },
-  "result": "perit:ice_brick_slab"
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "perit:block/smooth_ice",
-    "side": "perit:block/smooth_ice",
-    "top": "perit:block/smooth_ice"
-  }
-}
