@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "perit:block/polished_withered_bone",
-    "side": "perit:block/polished_withered_bone",
-    "top": "perit:block/polished_withered_bone"
-  }
-}

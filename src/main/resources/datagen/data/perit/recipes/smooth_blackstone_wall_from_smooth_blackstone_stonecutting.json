@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:smooth_blackstone"
-  },
-  "result": "perit:smooth_blackstone_wall"
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "perit:block/smooth_blackstone",
-    "side": "perit:block/smooth_blackstone",
-    "top": "perit:block/smooth_blackstone"
-  }
-}

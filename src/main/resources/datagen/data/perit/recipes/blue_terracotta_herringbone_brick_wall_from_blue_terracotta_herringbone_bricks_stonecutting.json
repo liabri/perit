@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:blue_terracotta_herringbone_bricks"
-  },
-  "result": "perit:blue_terracotta_herringbone_brick_wall"
-}

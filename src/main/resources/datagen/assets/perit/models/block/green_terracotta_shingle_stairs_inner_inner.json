@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "perit:block/green_terracotta_shingles",
-    "side": "perit:block/green_terracotta_shingles",
-    "top": "perit:block/green_terracotta_shingles"
-  }
-}

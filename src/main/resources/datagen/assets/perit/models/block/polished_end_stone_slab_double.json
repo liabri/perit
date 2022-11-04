@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "perit:block/polished_end_stone",
-    "side": "perit:block/polished_end_stone"
-  }
-}

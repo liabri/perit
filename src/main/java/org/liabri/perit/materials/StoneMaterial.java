@@ -26,6 +26,8 @@ import static net.minecraft.data.server.RecipeProvider.*;
 public class StoneMaterial extends Material {
     public enum Kind implements Material.Kind {
         Base,
+
+        CrackedBase,
         Smooth,
         Cut,
         CrackedCut,
@@ -50,11 +52,30 @@ public class StoneMaterial extends Material {
         Column,
         Chiseled,
         Setts,
-        Tiles
+        Tiles;
+
+//        public enum SubKind {
+//            STAIRS,
+//            WALL,
+//            SLAB,
+//            PILLAR,
+//            CUBE,
+//        }
+//
+//        private final SubKind subKind;
+//
+//
+//        Kind(SubKind subKind) {
+//            this.subKind = subKind;
+//        }
     }
 
     public StoneMaterial(String name, Block block, ItemGroup itemGroup, StoneMaterial.Kind[] list) {
         super(name, block, itemGroup, list);
+    }
+
+    public StoneMaterial(String name, String textureName, Block block, ItemGroup itemGroup, StoneMaterial.Kind[] list) {
+        super(name, textureName, block, itemGroup, list);
     }
 
     @Override
@@ -103,6 +124,14 @@ public class StoneMaterial extends Material {
             register(Kind.Base,this.COMPOSE_NAME + "_slab", new SlabBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
             register(Kind.Base,this.COMPOSE_NAME + "_stairs", new StairsBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
             register(Kind.Base,this.COMPOSE_NAME + "_wall", new WallBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
+            this.BASE = BASE.getLeft();
+        }
+
+        if (this.LIST.contains(Kind.CrackedBase)) {
+            Pair<Block, Item> BASE = register(Kind.CrackedBase, "cracked_" + this.BASE_NAME, new Block(FabricBlockSettings.copyOf(this.BASE)), ITEM_GROUP);
+            register(Kind.CrackedBase,"cracked_" + this.COMPOSE_NAME + "_slab", new SlabBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
+            register(Kind.CrackedBase,"cracked_" + this.COMPOSE_NAME + "_stairs", new StairsBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
+            register(Kind.CrackedBase,"cracked_" + this.COMPOSE_NAME + "_wall", new WallBlock(BASE.getLeft().getDefaultState(), FabricBlockSettings.copy(BASE.getLeft())), ITEM_GROUP);
             this.BASE = BASE.getLeft();
         }
 
@@ -261,6 +290,7 @@ public class StoneMaterial extends Material {
         }
 
         if (this.LIST.contains(Kind.Chiseled)) {
+            register(Kind.CrackedBriquettes ,"chiseled" + this.BASE_NAME, new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
 //            private final Pair<Block, Item> CHISELED_RUNES;
 //            private final Pair<Block, Item> CHISELED_GEOMETRIC;
 //            private final Pair<Block, Item> CHISELED_DANCE;

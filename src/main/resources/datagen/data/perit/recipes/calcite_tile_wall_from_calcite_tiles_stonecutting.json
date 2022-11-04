@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:calcite_tiles"
-  },
-  "result": "perit:calcite_tile_wall"
-}
