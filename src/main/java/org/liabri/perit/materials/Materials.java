@@ -75,6 +75,14 @@ public class Materials {
     static {
         // Terracotta
         for(int i=0; i< TERRACOTTAS.length; i++) {
+            materials.add(new GenericMaterial(COLOURS[i] + "_terracotta", TERRACOTTAS[i], ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
+                    GenericMaterial.Kind.Stairs,
+                    GenericMaterial.Kind.Slab,
+                    GenericMaterial.Kind.Walls
+            }));
+        }
+
+        for(int i=0; i< TERRACOTTAS.length; i++) {
             materials.add(new StoneMaterial(COLOURS[i] + "_terracotta", TERRACOTTAS[i], ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
                     StoneMaterial.Kind.Bricks,
                     StoneMaterial.Kind.HerringboneBricks,
@@ -179,6 +187,12 @@ public class Materials {
                 StoneMaterial.Kind.Pillar,
                 StoneMaterial.Kind.Tiles,
                 StoneMaterial.Kind.Setts
+        }));
+
+        // Smooth Stone
+        materials.add(new GenericMaterial("smooth_stone", Blocks.SMOOTH_STONE, ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
+                GenericMaterial.Kind.Stairs,
+                GenericMaterial.Kind.Walls
         }));
 
         // Blackstone
@@ -308,7 +322,7 @@ public class Materials {
                 GenericMaterial.Kind.Walls
         }));
 
-        materials.add(new GenericMaterial("quartz_bricks", Blocks.QUARTZ_BRICKS, ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
+        materials.add(new GenericMaterial("quartz_brick", Blocks.QUARTZ_BRICKS, ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
                 GenericMaterial.Kind.Stairs,
                 GenericMaterial.Kind.Slab,
                 GenericMaterial.Kind.Walls
