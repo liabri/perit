@@ -69,6 +69,7 @@ public class StoneMaterial extends Material {
     public void generateTags(PeritDataGenerator.PeritBlockTagProvider peritBlockTagProvider) {
         for(Map.Entry<Material.Kind, Pair<Block, Item>> bi : blocks.entrySet()) {
             if (bi.getValue().getLeft() instanceof SlabBlock) {
+                System.out.println("BOOgegrO");
                 peritBlockTagProvider.getOrCreateTagBuilder(BlockTags.SLABS).add(bi.getValue().getLeft());
             }
         }
