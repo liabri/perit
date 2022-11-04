@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "perit:magenta_concrete_shingles"
-  },
-  "result": "perit:magenta_concrete_shingle_slab"
-}

@@ -1,4 +1,4 @@
-// 1.19.2	2022-11-04T02:24:17.215093215	Tags for minecraft:block
-1f71d72748ded92120d9c6efa0d02bef66dbeffd data/minecraft/tags/blocks/slabs.json
-ad0da5bf80788940ea691973ee4abc318e152132 data/minecraft/tags/blocks/walls.json
-37ab47820072a963433ce959f463e61294b04bf2 data/minecraft/tags/blocks/stairs.json
+// 1.19.2	2022-11-04T02:32:39.741051911	Tags for minecraft:block
+315cecccbfe133fdf890ead04d15c5aed23d3d0b data/minecraft/tags/blocks/slabs.json
+f790f4a3e538fc34f045f2cbcf11f4830a299513 data/minecraft/tags/blocks/walls.json
+1cb0d3ea0f206e7c7d881e9cc1954235b396baf3 data/minecraft/tags/blocks/stairs.json

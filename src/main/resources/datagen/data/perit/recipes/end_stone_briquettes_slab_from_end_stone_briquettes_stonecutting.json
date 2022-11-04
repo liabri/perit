@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "perit:end_stone_briquettes"
-  },
-  "result": "perit:end_stone_briquettes_slab"
-}
