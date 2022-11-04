@@ -97,7 +97,8 @@ public class Materials {
                 StoneMaterial.Kind.Briquettes,
                 StoneMaterial.Kind.Chiseled,
                 StoneMaterial.Kind.Pillar,
-                StoneMaterial.Kind.Setts
+                StoneMaterial.Kind.Setts,
+                StoneMaterial.Kind.Tiles
         }));
 
         // Diorite
@@ -107,6 +108,7 @@ public class Materials {
                 StoneMaterial.Kind.Briquettes,
                 StoneMaterial.Kind.Chiseled,
                 StoneMaterial.Kind.Pillar,
+                StoneMaterial.Kind.Tiles
         }));
 
         // Granite
@@ -116,6 +118,7 @@ public class Materials {
                 StoneMaterial.Kind.Briquettes,
                 StoneMaterial.Kind.Chiseled,
                 StoneMaterial.Kind.Pillar,
+                StoneMaterial.Kind.Tiles
         }));
 
         // Tuff
@@ -136,6 +139,7 @@ public class Materials {
                 StoneMaterial.Kind.Briquettes,
                 StoneMaterial.Kind.Chiseled,
                 StoneMaterial.Kind.Pillar,
+                StoneMaterial.Kind.Tiles
         }));
 
         // Basalt
@@ -144,6 +148,8 @@ public class Materials {
                 StoneMaterial.Kind.Bricks,
                 StoneMaterial.Kind.Briquettes,
                 StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Tiles,
+                StoneMaterial.Kind.Setts
         }));
 
         // Dripstone
@@ -154,6 +160,7 @@ public class Materials {
                 StoneMaterial.Kind.Briquettes,
                 StoneMaterial.Kind.Chiseled,
                 StoneMaterial.Kind.Pillar,
+                StoneMaterial.Kind.Tiles
         }));
 
         // Deepslate
@@ -163,11 +170,29 @@ public class Materials {
                 StoneMaterial.Kind.Pillar,
         }));
 
+        // Stone
+        materials.add(new StoneMaterial( "quartz", Blocks.QUARTZ_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Pillar,
+                StoneMaterial.Kind.Tiles,
+                StoneMaterial.Kind.Setts
+        }));
+
+        // Blackstone
+        materials.add(new StoneMaterial( "quartz", Blocks.QUARTZ_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Smooth,
+                StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Pillar,
+                StoneMaterial.Kind.Tiles,
+        }));
+
         // Netherrack
         materials.add(new StoneMaterial("netherrack", Blocks.NETHERRACK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
                 StoneMaterial.Kind.Smooth,
                 StoneMaterial.Kind.Polished,
-                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Bricks,
                 StoneMaterial.Kind.Chiseled,
                 StoneMaterial.Kind.Pillar,
         }));
@@ -200,9 +225,9 @@ public class Materials {
                 StoneMaterial.Kind.Smooth,
                 StoneMaterial.Kind.Polished,
                 StoneMaterial.Kind.Bricks,
-                StoneMaterial.Kind.Briquettes,
                 StoneMaterial.Kind.Chiseled,
                 StoneMaterial.Kind.Pillar,
+                StoneMaterial.Kind.Setts,
         }));
 
         // Wither Bone
@@ -211,9 +236,9 @@ public class Materials {
                 StoneMaterial.Kind.Smooth,
                 StoneMaterial.Kind.Polished,
                 StoneMaterial.Kind.Bricks,
-                StoneMaterial.Kind.Briquettes,
                 StoneMaterial.Kind.Chiseled,
                 StoneMaterial.Kind.Pillar,
+                StoneMaterial.Kind.Setts,
         }));
 
         // Ice
@@ -233,6 +258,7 @@ public class Materials {
                 StoneMaterial.Kind.Briquettes,
                 StoneMaterial.Kind.Chiseled,
                 StoneMaterial.Kind.Pillar,
+                StoneMaterial.Kind.Setts
         }));
 
         // Soul Sandstone
@@ -282,7 +308,8 @@ public class Materials {
 
         materials.add(new StoneMaterial( "quartz", Blocks.QUARTZ_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
                 StoneMaterial.Kind.Polished,
-                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Tiles,
+                StoneMaterial.Kind.Setts
         }));
 
         // Purpur
@@ -295,6 +322,7 @@ public class Materials {
                 StoneMaterial.Kind.Polished,
                 StoneMaterial.Kind.Bricks,
                 StoneMaterial.Kind.Chiseled,
+                StoneMaterial.Kind.Setts
         }));
 
         // End stone
@@ -329,9 +357,11 @@ public class Materials {
         materials.add(new StoneMaterial( "dark_prismarine", Blocks.DARK_PRISMARINE, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
                 StoneMaterial.Kind.Smooth,
                 StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Cut,
                 StoneMaterial.Kind.Chiseled,
                 StoneMaterial.Kind.Briquettes,
-                StoneMaterial.Kind.Pillar
+                StoneMaterial.Kind.Pillar,
+                StoneMaterial.Kind.Tiles
         }));
 
 //
