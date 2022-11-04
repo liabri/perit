@@ -97,6 +97,7 @@ public class Materials {
                 StoneMaterial.Kind.Briquettes,
                 StoneMaterial.Kind.Chiseled,
                 StoneMaterial.Kind.Pillar,
+                StoneMaterial.Kind.Setts
         }));
 
         // Diorite
@@ -316,7 +317,7 @@ public class Materials {
                 StoneMaterial.Kind.Smooth,
                 StoneMaterial.Kind.Polished,
                 StoneMaterial.Kind.Chiseled,
-                StoneMaterial.Kind.Briquettes,
+                StoneMaterial.Kind.Setts,
                 StoneMaterial.Kind.Pillar
         }));
 
