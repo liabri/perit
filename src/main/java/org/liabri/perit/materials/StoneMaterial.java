@@ -140,7 +140,7 @@ public class StoneMaterial extends Material {
         }
 
         if (this.LIST.contains(Kind.Packed)) {
-            Pair<Block, Item> PACKED = register(Kind.Packed ,"packed_" + this.COMPOSE_NAME, new PillarBlock(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
+            Pair<Block, Item> PACKED = register(Kind.Packed ,"packed_" + this.COMPOSE_NAME, new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
             register(Kind.Packed ,"packed_" + this.COMPOSE_NAME + "_slab", new SlabBlock(PACKED.getLeft().getDefaultState(), FabricBlockSettings.copy(PACKED.getLeft())), ITEM_GROUP);
             register(Kind.Packed ,"packed_" + this.COMPOSE_NAME + "_stairs", new StairsBlock(PACKED.getLeft().getDefaultState(), FabricBlockSettings.copy(PACKED.getLeft())), ITEM_GROUP);
             register(Kind.Packed ,"packed_" + this.COMPOSE_NAME + "_wall", new WallBlock(PACKED.getLeft().getDefaultState(), FabricBlockSettings.copy(PACKED.getLeft())), ITEM_GROUP);
@@ -183,9 +183,9 @@ public class StoneMaterial extends Material {
 
         if (this.LIST.contains(Kind.Bricks)) {
             Pair<Block, Item> BRICKS = register(Kind.Bricks ,this.COMPOSE_NAME + "_bricks", new Block(FabricBlockSettings.copyOf(BASE)), ITEM_GROUP);
-//            register(Kind.Bricks ,this.COMPOSE_NAME + "_brick_slab", new SlabBlock(BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(BRICKS.getLeft())), ITEM_GROUP);
-//            register(Kind.Bricks ,this.COMPOSE_NAME + "_brick_stairs", new StairsBlock(BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(BRICKS.getLeft())), ITEM_GROUP);
-//            register(Kind.Bricks ,this.COMPOSE_NAME + "_brick_wall", new WallBlock(BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(BRICKS.getLeft())), ITEM_GROUP);
+            register(Kind.Bricks ,this.COMPOSE_NAME + "_brick_slab", new SlabBlock(BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(BRICKS.getLeft())), ITEM_GROUP);
+            register(Kind.Bricks ,this.COMPOSE_NAME + "_brick_stairs", new StairsBlock(BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(BRICKS.getLeft())), ITEM_GROUP);
+            register(Kind.Bricks ,this.COMPOSE_NAME + "_brick_wall", new WallBlock(BRICKS.getLeft().getDefaultState(), FabricBlockSettings.copy(BRICKS.getLeft())), ITEM_GROUP);
         }
 
         if (this.LIST.contains(Kind.MossyBricks)) {
