@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:withered_bone_bricks"
-  },
-  "result": "perit:withered_bone_brick_stairs"
-}

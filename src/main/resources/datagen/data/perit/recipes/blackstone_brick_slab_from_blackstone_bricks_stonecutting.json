@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "perit:blackstone_bricks"
-  },
-  "result": "perit:blackstone_brick_slab"
-}

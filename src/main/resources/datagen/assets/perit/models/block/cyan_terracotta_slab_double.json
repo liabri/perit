@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "minecraft:block/cyan_terracotta",
-    "side": "minecraft:block/cyan_terracotta"
-  }
-}

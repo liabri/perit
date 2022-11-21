@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "perit:block/smooth_blackstone",
-    "side": "perit:block/smooth_blackstone",
-    "top": "perit:block/smooth_blackstone"
-  }
-}

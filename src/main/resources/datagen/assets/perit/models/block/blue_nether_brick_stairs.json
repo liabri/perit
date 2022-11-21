@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "perit:block/blue_nether_bricks",
-    "side": "perit:block/blue_nether_bricks",
-    "top": "perit:block/blue_nether_bricks"
-  }
-}

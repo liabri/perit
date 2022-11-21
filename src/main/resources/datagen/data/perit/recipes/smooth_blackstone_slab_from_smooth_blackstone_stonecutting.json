@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "perit:smooth_blackstone"
-  },
-  "result": "perit:smooth_blackstone_slab"
-}

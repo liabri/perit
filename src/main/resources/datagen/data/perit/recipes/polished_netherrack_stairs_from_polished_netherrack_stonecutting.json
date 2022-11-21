@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:polished_netherrack"
-  },
-  "result": "perit:polished_netherrack_stairs"
-}

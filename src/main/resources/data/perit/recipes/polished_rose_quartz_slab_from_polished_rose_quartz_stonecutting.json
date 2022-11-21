@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "perit:polished_rose_quartz"
+  },
+  "result": "perit:polished_rose_quartz_slab"
+}

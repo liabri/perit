@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "perit:block/rose_quartz_bricks",
+    "side": "perit:block/rose_quartz_bricks"
+  }
+}

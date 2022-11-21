@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "minecraft:yellow_terracotta"
-  },
-  "result": "perit:yellow_terracotta_shingles"
-}

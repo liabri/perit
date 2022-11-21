@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "perit:rose_quartz_bricks"
+  },
+  "result": "perit:rose_quartz_brick_stairs"
+}
