@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "perit:magenta_terracotta_herringbone_bricks"
-  },
-  "result": "perit:magenta_terracotta_herringbone_brick_slab"
-}

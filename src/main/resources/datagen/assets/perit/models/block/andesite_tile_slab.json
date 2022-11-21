@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "perit:block/andesite_tiles",
-    "side": "perit:block/andesite_tiles",
-    "top": "perit:block/andesite_tiles"
-  }
-}

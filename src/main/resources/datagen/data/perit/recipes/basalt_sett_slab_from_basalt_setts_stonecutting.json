@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "perit:basalt_setts"
-  },
-  "result": "perit:basalt_sett_slab"
-}

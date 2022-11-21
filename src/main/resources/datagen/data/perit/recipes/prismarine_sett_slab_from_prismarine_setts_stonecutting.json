@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "perit:prismarine_setts"
-  },
-  "result": "perit:prismarine_sett_slab"
-}

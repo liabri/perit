@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "perit:obsidian_bricks"
-  },
-  "result": "perit:obsidian_brick_slab"
-}

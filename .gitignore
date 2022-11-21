@@ -36,4 +36,6 @@ bin/
 run/
 remappedSrc/
 src/main/resources/.cache/
+src/main/resources/datagen
 temp/
+serq/

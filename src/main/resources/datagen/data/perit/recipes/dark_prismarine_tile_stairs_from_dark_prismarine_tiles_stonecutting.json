@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:dark_prismarine_tiles"
-  },
-  "result": "perit:dark_prismarine_tile_stairs"
-}

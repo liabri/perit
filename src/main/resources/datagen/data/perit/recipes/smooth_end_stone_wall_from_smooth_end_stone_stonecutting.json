@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:smooth_end_stone"
-  },
-  "result": "perit:smooth_end_stone_wall"
-}

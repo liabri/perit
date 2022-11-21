@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "perit:polished_white_terracotta"
-  },
-  "result": "perit:polished_white_terracotta_stairs"
-}

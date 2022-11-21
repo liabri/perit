@@ -334,6 +334,14 @@ public class Materials {
                 StoneMaterial.Kind.Setts
         }));
 
+        // Create Rose Quartz
+        materials.add(new StoneMaterial( "rose_quartz", Blocks.QUARTZ_BLOCK, ItemGroup.BUILDING_BLOCKS, new StoneMaterial.Kind[]{
+                StoneMaterial.Kind.Bricks,
+                StoneMaterial.Kind.Polished,
+                StoneMaterial.Kind.Pillar,
+                StoneMaterial.Kind.Chiseled
+        }));
+
         // Purpur
         materials.add(new GenericMaterial("purpur", Blocks.PURPUR_BLOCK, ItemGroup.BUILDING_BLOCKS, new GenericMaterial.Kind[]{
                 GenericMaterial.Kind.Walls
