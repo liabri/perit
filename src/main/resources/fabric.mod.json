@@ -2,35 +2,31 @@
   "schemaVersion": 1,
   "id": "perit",
   "version": "${version}",
-
-  "name": "Perit",
-  "description": "Blocks.",
-  "authors": [
-    "liabri"
-  ],
-
-  "license": "CC0-1.0",
+  "name": "untitledperit",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
   "icon": "assets/perit/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "client": [
-      "org.liabri.perit.PeritClient"
+      "org.nice.perit.client.PeritClient"
     ],
     "main": [
-      "org.liabri.perit.Perit"
-    ],
-    "fabric-datagen": [
-      "org.liabri.perit.PeritDataGenerator"
+      "org.nice.perit.Perit"
     ]
   },
-
+  "mixins": [
+    "perit.mixins.json",
+    {
+      "config": "perit.client.mixins.json",
+      "environment": "client"
+    }
+  ],
   "depends": {
-    "fabricloader": ">=0.13.3",
+    "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "1.19.x",
-    "java": ">=17"
-  },
-
-  "accessWidener": "perit.accesswidener"
+    "minecraft": "${minecraft_version}"
+  }
 }

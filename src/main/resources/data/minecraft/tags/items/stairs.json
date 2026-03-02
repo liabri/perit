@@ -1,0 +1,21 @@
+{
+    "replace": false,
+    "values": [
+      "perit:white_concrete_stairs",
+      "perit:orange_concrete_stairs",
+      "perit:magenta_concrete_stairs",
+      "perit:light_blue_concrete_stairs",
+      "perit:yellow_concrete_stairs",
+      "perit:lime_concrete_stairs",
+      "perit:pink_concrete_stairs",
+      "perit:gray_concrete_stairs",
+      "perit:light_gray_concrete_stairs",
+      "perit:cyan_concrete_stairs",
+      "perit:purple_concrete_stairs",
+      "perit:blue_concrete_stairs",
+      "perit:brown_concrete_stairs",
+      "perit:green_concrete_stairs",
+      "perit:red_concrete_stairs",
+      "perit:black_concrete_stairs"
+    ]
+  }

@@ -1,0 +1,21 @@
+{
+    "replace": false,
+    "values": [
+      "perit:white_concrete_wall",
+      "perit:orange_concrete_wall",
+      "perit:magenta_concrete_wall",
+      "perit:light_blue_concrete_wall",
+      "perit:yellow_concrete_wall",
+      "perit:lime_concrete_wall",
+      "perit:pink_concrete_wall",
+      "perit:gray_concrete_wall",
+      "perit:light_gray_concrete_wall",
+      "perit:cyan_concrete_wall",
+      "perit:purple_concrete_wall",
+      "perit:blue_concrete_wall",
+      "perit:brown_concrete_wall",
+      "perit:green_concrete_wall",
+      "perit:red_concrete_wall",
+      "perit:black_concrete_wall"
+    ]
+  }
